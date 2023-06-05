@@ -1,49 +1,34 @@
 ---
 marp: true
-theme: gaia
+theme: kennedy
 paginate: true
 backgroundColor: white
 color: black
 header: "![](images/logo_small.png)"
-
-style: |
-  header {
-    display: flex;
-    justify-content: end;
-    align-items: start;
-    height: 150px;
-    padding: 25px;
-    }
-    header img {
-    height: 50px;
-    }
 ---
 
-<style>
-
-</style>
-
-<!-- _class: lead -->
-<!-- _paginate: false -->
-<!-- _backgroundColor: black -->
-<!-- _color: white -->
+<!-- _class: titlepage -->
 <!-- _header: "![](images/logo_small_white.png)" -->
 
 ![bg opacity:.5](images/beckhoff.jpg)
-# Marp
 
-Markdown Presentation Ecosystem
+<div class="shape"></div>
+
+# SISTEMI AUTOMATICI
+
+## Markdown Presentation Ecosystem
 
 https://marp.app/
 
 ---
 
-<!-- _backgroundColor: #E30512 -->
-<!-- _color: white -->
+<!-- _class: sectionpage -->
 <!-- _header: "![](images/logo_small_white.png)" -->
 
-
 # INTRODUZIONE
+
+<div class="shape"></div>
+
 
 ---
 
