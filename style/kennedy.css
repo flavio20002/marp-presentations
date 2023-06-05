@@ -18,16 +18,19 @@
   --color-foreground: #FAFAFAFA;
   --color-highlight: white;
   --red-color: #FA0000;
-  padding-top: 0px;
+  padding-top: 100px;
   padding-bottom: 50px;
   padding-left: 120px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 
 header {
   display: flex;
   justify-content: end;
   align-items: start;
-  height: 150px;
+  height: 100px;
   padding: 25px;
   z-index: 2;
 }
@@ -44,6 +47,7 @@ section .shape{
   position: absolute;
   z-index: 0;
   margin-left: -120px;
+  margin-top: -100px !important;
   margin-bottom: -50px; 
 }
 
@@ -61,6 +65,41 @@ code {
   align-items: center;
   gap: 1rem;
 }
+
+.title {
+  position: absolute;
+  font-size: 1.8em;
+  font-weight: bold;
+  top: 25px;
+  left: 120px;
+  z-index: 2;
+  max-width: 1000px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul > li::before {
+  content: "\2022";
+  color: var(--red-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+ol {
+  list-style: none; 
+  counter-reset: item; 
+}
+
+ol > li:before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  color: var(--red-color);
+}
+
 
 /* ------------------- TITLEPAGE -----------------------------*/
 
@@ -84,7 +123,7 @@ section.titlepage .shape{
   clip-path: polygon(100% 0%, 55% 0%, 80% 100%, 100% 100%);
   position: absolute;
   z-index: 0;
-  margin-top: -50px;
+  margin-top: -50px !important;
 }
 
 section.titlepage h1{
@@ -94,6 +133,7 @@ section.titlepage h1{
 /* ------------------- SECTIONPAGE -----------------------------*/
 
 section.sectionpage {
+  padding-top: 0px;
   color: white !important;
   display: flex;
   flex-flow: column nowrap;
@@ -108,6 +148,7 @@ section.sectionpage .shape{
   clip-path: polygon(1180px 150px, 1130px 150px, 1130px 570px, 800px 570px, 800px 620px, 1180px 620px, 1180px 200px);
   position: absolute;
   z-index: 0;
+  margin-top: 0px !important;
 }
 
 section.sectionpage h1 {
