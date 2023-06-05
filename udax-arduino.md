@@ -6,13 +6,6 @@ paginate: true
 backgroundColor: white
 color: black
 header: "![](images/logo_small.png)"
-style: |
-  .columns {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: center;
-    gap: 1rem;
-  }
 ---
 
 <!-- _class: titlepage -->
@@ -65,7 +58,6 @@ foobar
 ```
 
 ___
-
 
 <div class="shape"></div>
 
