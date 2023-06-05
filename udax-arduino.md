@@ -40,7 +40,7 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 ---
 <div class="shape"></div>
 
-<div class="title">Sommario</div>
+<h1 class="title">Sommario</h1>
 
 - Tinkercad
 - Lampeggio LED integrato
@@ -53,7 +53,7 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 
 <div class="shape"></div>
 
-# How to write slides
+<h1 class="title">How to write slides</h1>
 
 Split pages by horizontal ruler (`---`). It's very simple! :satisfied:
 
@@ -72,8 +72,7 @@ foobar
 ___
 
 <div class="shape"></div>
-
-# Bullet list
+<h1 class="title">Bullet list</h1>
 
 - One
 - Two
@@ -83,7 +82,7 @@ ___
 
 <div class="shape"></div>
 
-# Fragmented list
+<h1 class="title">Fragmented list</h1>
 
 * One
 * Two
@@ -93,14 +92,13 @@ ___
 
 <div class="shape"></div>
 
-# Multi columns in Marp slide
+<h1 class="title">Multi columns in Marp slide</h1>
 
 <div class="columns">
 <div>
 
-## Column 1
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eveniet, corporis commodi vitae accusamus obcaecati dolor corrupti eaque id numquam officia velit sapiente incidunt dolores provident laboriosam praesentium nobis culpa.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eveniet.
 
 </div>
 <div>
