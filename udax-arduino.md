@@ -14,7 +14,6 @@ header: "![](images/logo_small.png)"
 ![bg opacity:.3](images/arduino.webp)
 
 <div class="shape"></div>
-
 <div class="spacer"></div>
 
 # TECNOLOGIE INFORMATICHE
@@ -29,9 +28,8 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 
 ---
 
-<div class="shape"></div>
 
-<h1 class="title">Sommario</h1>
+# Sommario
 
 - Tinkercad
 - Lampeggio LED integrato
@@ -46,15 +44,9 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 <!-- _header: "![](images/logo_small_white.png)" -->
 
 # TINKERCAD
-
-<div class="shape"></div>
-
-
 ---
 
-
-<div class="shape"></div>
-<h1 class="title">Introduzione</h1>
+# Introduzione
 
 Tinkercad è un programma di modellazione 3D e di
 simulazione di circuiti elettronici creato da Autodesk. Per accedere:
@@ -67,8 +59,7 @@ simulazione di circuiti elettronici creato da Autodesk. Per accedere:
 
 ---
 
-<div class="shape"></div>
-<h1 class="title">How to write slides</h1>
+# How to write slides
 
 Split pages by horizontal ruler (`---`). It's very simple! :satisfied:
 
@@ -86,8 +77,7 @@ foobar
 
 ___
 
-<div class="shape"></div>
-<h1 class="title">Bullet list</h1>
+# Bullet list
 
 - One
 - Two
@@ -95,9 +85,7 @@ ___
 
 ---
 
-<div class="shape"></div>
-
-<h1 class="title">Fragmented list</h1>
+# Fragmented list
 
 * One
 * Two
@@ -105,9 +93,7 @@ ___
 
 ---
 
-<div class="shape"></div>
-
-<h1 class="title">Multi columns in Marp slide</h1>
+# Multi columns in Marp slide
 
 <div class="columns">
 <div>
