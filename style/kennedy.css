@@ -16,7 +16,7 @@
 
 :root {
   --color-foreground: #FAFAFAFA;
-  --color-highlight: white;
+  --color-highlight: #FA0000;
   --red-color: #FA0000;
   padding-top: 150px;
   padding-bottom: 50px;
@@ -37,6 +37,7 @@ header {
 
 header img {
   height: 50px;
+  content: url("images/logo_small.png");
 }
 
 section:before{
@@ -97,7 +98,6 @@ ul li li {
   padding-left: 10px;
 }
 
-
 section:not(.titlepage):not(.sectionpage) > h1:first-of-type {
   position: absolute;
   top: 50px;
@@ -106,6 +106,18 @@ section:not(.titlepage):not(.sectionpage) > h1:first-of-type {
   max-width: 1000px;
 }
 
+section > p > img,
+.columns img,
+section > p > a > img {
+  display: block;
+  margin: auto;
+}
+
+/* ------------------- SMALL -----------------------------*/
+
+section.small {
+  font-size: 30px;
+}
 
 /* ------------------- TITLEPAGE -----------------------------*/
 
@@ -116,6 +128,10 @@ section.titlepage {
   flex-flow: column nowrap;
   justify-content: center;
   background-color: black !important;
+}
+
+section.titlepage header img {
+  content: url("images/logo_small_white.png");
 }
 
 section.titlepage::after{
@@ -153,6 +169,10 @@ section.sectionpage {
   background-color: var(--red-color) !important;
 }
 
+section.sectionpage header img {
+  content: url("images/logo_small_white.png");
+}
+
 section.sectionpage:before{
   content:'';
   background-color: white;
@@ -168,6 +188,7 @@ section.sectionpage:before{
 
 section.sectionpage h1 {
     font-size: 2.5em;
+    max-width: 900px;
 }
 
 /***************** highlightjs **********************/
