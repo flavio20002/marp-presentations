@@ -168,3 +168,13 @@ l'orientamento del LED.
 
 [![w:700 RGB LEDs With Arduino in Tinkercad](images/udax-arduino/video.jpeg)](https://www.youtube.com/watch?v=YqHkULDmmGU "RGB LEDs With Arduino in Tinkercad")
 
+---
+
+# Tabella
+
+Fruit | Colour | Amount | Cost
+:-----:|:------:|:-----:|:------:
+Banana | Yellow | 4 | £1.00
+Apple | Red | 2 | £0.60
+Orange | Orange | 10 | £2.50
+Coconut | Brown | 1 | £1.50

@@ -18,7 +18,7 @@
   --color-foreground: #FAFAFAFA;
   --color-highlight: #FA0000;
   --red-color: #FA0000;
-  padding-top: 150px;
+  padding-top: 120px;
   padding-bottom: 50px;
   padding-left: 120px;
   display: flex;
@@ -49,7 +49,7 @@ section:before{
   position: absolute;
   z-index: 0;
   margin-left: -120px;
-  margin-top: -150px !important;
+  margin-top: -120px !important;
   margin-bottom: -50px; 
 }
 
@@ -111,6 +111,16 @@ section > p > img,
 section > p > a > img {
   display: block;
   margin: auto;
+}
+
+table thead th {
+  background: white;
+  color: black;
+}
+
+table th,
+table td{
+    border-color: #777777;
 }
 
 /* ------------------- SMALL -----------------------------*/
