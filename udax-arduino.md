@@ -29,15 +29,6 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 
 ---
 
-<!-- _class: sectionpage -->
-<!-- _header: "![](images/logo_small_white.png)" -->
-
-# INTRODUZIONE
-
-<div class="shape"></div>
-
-
----
 <div class="shape"></div>
 
 <h1 class="title">Sommario</h1>
@@ -51,8 +42,32 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 
 ---
 
+<!-- _class: sectionpage -->
+<!-- _header: "![](images/logo_small_white.png)" -->
+
+# TINKERCAD
+
 <div class="shape"></div>
 
+
+---
+
+
+<div class="shape"></div>
+<h1 class="title">Introduzione</h1>
+
+Tinkercad è un programma di modellazione 3D e di
+simulazione di circuiti elettronici creato da Autodesk. Per accedere:
+
+- Navigare verso il sito https://www.tinkercad.com
+- Two Selezionare il pulsante Accedi
+- Selezionare Studenti con codice della lezione
+- Inserire il codice della lezione fornito dal docente
+- Inserire il proprio nickname comunicato dal docente
+
+---
+
+<div class="shape"></div>
 <h1 class="title">How to write slides</h1>
 
 Split pages by horizontal ruler (`---`). It's very simple! :satisfied:
