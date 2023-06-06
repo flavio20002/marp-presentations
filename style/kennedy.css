@@ -18,7 +18,7 @@
   --color-foreground: #FAFAFAFA;
   --color-highlight: white;
   --red-color: #FA0000;
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 50px;
   padding-left: 120px;
   display: flex;
@@ -47,7 +47,7 @@ section .shape{
   position: absolute;
   z-index: 0;
   margin-left: -120px;
-  margin-top: -100px !important;
+  margin-top: -150px !important;
   margin-bottom: -50px; 
 }
 
@@ -74,19 +74,6 @@ code {
   max-width: 1000px;
 }
 
-ul {
-  list-style: none;
-}
-
-ul > li::before {
-  content: "\2022";
-  color: var(--red-color);
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
-
 ol {
   list-style: none; 
   counter-reset: item; 
@@ -96,6 +83,25 @@ ol > li:before {
   content: counter(item) ". ";
   counter-increment: item;
   color: var(--red-color);
+}
+
+ul li::marker {
+  content: "▶";
+  color: var(--red-color);
+}
+
+ul li {
+  padding-left: 10px;
+}
+
+
+ul li li::marker {
+  content: "◼";
+  color: var(--red-color);
+}
+
+ul li li {
+  padding-left: 10px;
 }
 
 
@@ -271,13 +277,4 @@ section.sectionpage h1 {
 
 .hljs-strong {
   font-weight: bold;
-}
-
-.hljs-formula,
-.hljs-operator,
-.hljs-params,
-.hljs-property,
-.hljs-punctuation,
-.hljs-tag {
-  /* purposely ignored */
 }
