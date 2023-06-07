@@ -36,7 +36,7 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 - [Lampeggio LED esterno](#lampeggio-led-esterno)
 - [Accensione LED graduale con potenziometro](#accensione-led-graduale-con-potenziometro)
 - [Accensione LED con pulsante](#accensione-led-con-pulsante)
-- [Fotoresistenza](#fotoresistenza)
+- [Fotoresistore](#fotoresistore)
 
 ---
 
@@ -288,6 +288,113 @@ void loop()
 - Modificare il codice secondo quanto riportato nelle slide successive
 - Premere il pulsante Avvia simulazione. Si può notare il LED esterno si accende quando il tasto è premuto e si spegne quando il tasto non è premuto.
 
+---
+
+
+# Schema Elettrico
+
+![](images/udax-arduino/led_pulsante_schema.png)
+
+---
+
+# Codice
+
+
+```cpp
+#define pinLed 3
+#define pinButt 2
+
+void setup() {
+  pinMode(pinLed, OUTPUT);
+  pinMode(pinButt, INPUT);
+}
+void loop() {
+  bool buttonValue = digitalRead(pinButt);
+  if (buttonValue) {
+    digitalWrite(pinLed, HIGH );
+  }
+  else {
+    digitalWrite(pinLed, LOW );
+  }
+  delay(100); // Wait for 100 millisecond(s)
+}
+```
+---
+
+# Variazioni
+
+<div class="columns">
+<div>
+
+- Verificare che il
+frammento di codice
+accanto porta allo stesso
+risultato. Perché?
+</div>
+<div>
+
+```cpp
+#define pinLed 3
+#define pinButt 2
+
+void setup() {
+  pinMode(pinLed, OUTPUT);
+  pinMode(pinButt, INPUT);
+}
+
+void loop() {
+  digitalWrite(pinLed, digitalRead(pinButt));
+  delay(100); // Wait for 100 millisecond(s)
+}
+```
+
+</div>
+</div>
+
+---
+
+<!-- _class: sectionpage -->
+
+# Fotoresistore
+
+---
+
+# Istruzioni
+
+<!-- _class: small -->
+
+- Aggiungere al progetto un componente Arduino Uno R3
+- Aggiungere al progetto una breadboard piccola, una resistenza dal valore di 220 Ω, un LED, un fotoresistore ed un'altra resistenza da 10 kΩ seguendo lo schema elettrico.
+- Effettuare i collegamenti seguendo lo schema elettrico e rispettando l'orientamento del LED. 
+- Premere il pulsante Codice in alto a destra. 
+- Scegliere dal menù a discesa la voce Testo
+- Modificare il codice secondo quanto riportato nelle slide successive
+- Premere il pulsante Avvia simulazione. Si può notare il LED esterno diventare più o meno luminoso a seconda della luminosità rilevata dal fotoresistore (modificabile anch'essa con un cursore apposito)
+
+---
+
+# Schema Elettrico
+
+![](images/udax-arduino/led_fotoresistore_schema.png)
+
+---
+
+# Codice
+
+```cpp
+#define pinLed 3
+#define pinFoto A0
+
+void setup() {
+  pinMode(pinLed, OUTPUT);
+  pinMode(pinFoto, INPUT);
+}
+
+void loop() {
+  analogWrite(pinLed,(analogRead(pinFoto)/4));
+  delay(100);
+}
+```
 ---
 
 <!-- _class: sectionpage -->
