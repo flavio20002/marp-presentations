@@ -34,9 +34,9 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 - [Tinkercad](#thinkercad)
 - [Lampeggio LED integrato](#lampeggio-led-integrato)
 - [Lampeggio LED esterno](#lampeggio-led-esterno)
-- Accensione LED graduale con potenziometro
-- Accensione LED con pulsante
-- Fotoresistenza
+- [Accensione LED graduale con potenziometro](#accensione-led-graduale-con-potenziometro)
+- [Accensione LED con pulsante](#accensione-led-con-pulsante)
+- [Fotoresistenza](#fotoresistenza)
 
 ---
 
@@ -60,7 +60,7 @@ simulazione di circuiti elettronici creato da Autodesk. Per accedere:
 
 # Panoramica
 
-![w:1000](images/udax-arduino/1.png)
+![](images/udax-arduino/tinkercad.png)
 
 --- 
 
@@ -76,7 +76,7 @@ simulazione di circuiti elettronici creato da Autodesk. Per accedere:
   </div>
   <div>
 
-  ![w:500](images/udax-arduino/2.png)
+  ![](images/udax-arduino/progetto.png)
   </div>
 </div>
 
@@ -102,7 +102,7 @@ simulazione di circuiti elettronici creato da Autodesk. Per accedere:
 
 # Schema Elettrico
 
-![w:1000](images/udax-arduino/3.png)
+![](images/udax-arduino/led_integrato_schema.png)
 
 ---
 
@@ -161,22 +161,141 @@ l'orientamento del LED.
 
 # Schema Elettrico
 
-![w:1000](images/udax-arduino/3.png)
+![](images/udax-arduino/led_esterno_schema.png)
 
 ---
 
 
-# Video di approfondimento
+# Codice
+
+```cpp
+void setup()
+{
+  pinMode(3, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(3, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(3, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+}
+```
+---
+
+
+# Variazioni
+
+<div class="columns">
+<div>
+
+- Collegare un secondo LED alla porta 4. Modificare il codice di Arduino con il seguente frammento. Cosa cambia?
+- Provare a modificare il circuito ed il programma per realizare un semaforo.
+</div>
+<div>
+
+```cpp
+void setup()
+{
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+}
+void loop()
+{
+  digitalWrite(3, HIGH);
+  digitalWrite(4, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(3, LOW);
+  digitalWrite(4, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+}
+```
+
+</div>
+</div>
+
+---
+
+<!-- _class: sectionpage -->
+
+# Accensione LED graduale con potenziometro
+
+---
+
+<!-- _class: small -->
+
+# Istruzioni
+
+- Aggiungere al progetto un componente Arduino Uno R3
+- Aggiungere al progetto una breadboard piccola, una resistenza dal
+valore di 220 Ω, un LED ed un potenziometro seguendo lo schema
+elettrico.
+- Effettuare i collegamenti seguendo lo schema elettrico e rispettando
+l'orientamento del LED.
+- Premere il pulsante Codice in alto a destra.
+- Scegliere dal menù a discesa la voce Testo e modificare il codice secondo quanto riportato nelle slide successive
+- Premere il pulsante Avvia simulazione. Si può notare il LED esterno
+diventare più o meno luminoso a seconda della rotazione del
+potenziometro
+
+---
+
+# Schema Elettrico
+
+![](images/udax-arduino/led_potenziometro_schema.png)
+
+---
+
+# Codice
+
+```cpp
+#define pinLed 3
+#define pinPot A0
+
+void setup()
+{
+  pinMode(pinLed, OUTPUT);
+  pinMode(pinPot, INPUT);
+}
+
+void loop()
+{
+  // analogRead value is between 0-1023
+  byte value = analogRead(pinPot)/4;
+  // analogWrite value is between 0-255
+  analogWrite(pinLed, value);
+  delay(10);
+}
+```
+---
+
+<!-- _class: sectionpage -->
+
+# Accensione LED con pulsante
+
+---
+
+<!-- _class: small -->
+
+# Istruzioni
+
+- Aggiungere al progetto un componente Arduino Uno R3
+- Aggiungere al progetto una breadboard piccola, una resistenza dal valore di 220 Ω, un LED, un pulsante ed un'altra resistenza da 10 kΩ (chiamata di pull-down) seguendo lo schema elettrico.
+- Effettuare i collegamenti seguendo lo schema elettrico e rispettando l'orientamento del LED. 
+- Premere il pulsante Codice in alto a destra. 
+- Scegliere dal menù a discesa la voce Testo
+- Modificare il codice secondo quanto riportato nelle slide successive
+- Premere il pulsante Avvia simulazione. Si può notare il LED esterno si accende quando il tasto è premuto e si spegne quando il tasto non è premuto.
+
+---
+
+<!-- _class: sectionpage -->
+
+# Approfondimenti
+
+---
+
+# RGB LEDs
 
 [![w:700 RGB LEDs With Arduino in Tinkercad](images/udax-arduino/video.jpeg)](https://www.youtube.com/watch?v=YqHkULDmmGU "RGB LEDs With Arduino in Tinkercad")
-
----
-
-# Tabella
-
-Fruit | Colour | Amount | Cost
-:-----:|:------:|:-----:|:------:
-Banana | Yellow | 4 | £1.00
-Apple | Red | 2 | £0.60
-Orange | Orange | 10 | £2.50
-Coconut | Brown | 1 | £1.50

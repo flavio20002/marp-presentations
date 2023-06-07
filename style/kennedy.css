@@ -15,7 +15,7 @@
 /***************** COMMON STRUCTURE **********************/
 
 :root {
-  --color-foreground: #FAFAFAFA;
+  --color-foreground: #FFFFFF;
   --color-highlight: #FA0000;
   --red-color: #FA0000;
   padding-top: 120px;
@@ -113,6 +113,15 @@ section > p > a > img {
   margin: auto;
 }
 
+section > p > img,
+section > p > a > img {
+  width: 1000px;
+}
+
+.columns img{
+  width: 500px;
+}
+
 table thead th {
   background: white;
   color: black;
@@ -125,8 +134,8 @@ table td{
 
 /* ------------------- SMALL -----------------------------*/
 
-section.small {
-  font-size: 30px;
+section.small li {
+  font-size: 0.8em;
 }
 
 /* ------------------- SUMMARYPAGE -----------------------------*/

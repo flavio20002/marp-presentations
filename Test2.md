@@ -323,3 +323,14 @@ a { color: green; }
 ##### ![w:1em h:1em](https://avatars1.githubusercontent.com/u/20685754?v=4)  Marp: Markdown presentation ecosystem — https://marp.app/
 
 ###### by Marp Team ([@marp-team][marp-team])
+
+---
+
+# Tabella
+
+Fruit | Colour | Amount | Cost
+:-----:|:------:|:-----:|:------:
+Banana | Yellow | 4 | £1.00
+Apple | Red | 2 | £0.60
+Orange | Orange | 10 | £2.50
+Coconut | Brown | 1 | £1.50
