@@ -27,11 +27,13 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 
 ---
 
+<!-- _class: summarypage -->
+
 # Sommario
 
-- Tinkercad
-- Lampeggio LED integrato
-- Lampeggio LED esterno
+- [Tinkercad](#thinkercad)
+- [Lampeggio LED integrato](#lampeggio-led-integrato)
+- [Lampeggio LED esterno](#lampeggio-led-esterno)
 - Accensione LED graduale con potenziometro
 - Accensione LED con pulsante
 - Fotoresistenza
