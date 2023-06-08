@@ -100,10 +100,15 @@ ul li li {
 
 section:not(.titlepage):not(.sectionpage) > h1:first-of-type {
   position: absolute;
-  top: 50px;
+  top: 0px;
   left: 120px;
   z-index: 2;
   max-width: 1000px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 section > p > img,
@@ -134,7 +139,8 @@ table td{
 
 /* ------------------- SMALL -----------------------------*/
 
-section.small li {
+section.small li,
+section.small p {
   font-size: 0.8em;
 }
 
@@ -182,6 +188,11 @@ section.titlepage .shape{
 }
 
 section.titlepage h1{
+  max-width: 650px;
+  font-size: 2.3em;
+}
+
+section.titlepage h2{
   max-width: 750px;
 }
 
