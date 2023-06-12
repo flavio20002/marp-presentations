@@ -119,6 +119,98 @@ TwinCAT è diviso in due moduli:
 
 ---
 
+# ADS
+
+- La comunicazione tra moduli software diversi, sia localizzati sullo stesso dispositivo hardware sia su due dispositivi hardware distinti, avviene tramite un protocollo definito da Beckhoff ma aperto, denominato ADS (Automation Device Specification)
+- **ADS Server**: è tipicamente rappresentato da un componente del TwinCAT kernel, che esegue task Real-Time; 
+- **ADS Client**: è generalmente un applicativo Windows che accede ai dati Real-Time di un ADS Server per configurazione, programmazione o supervisione
+
+---
+
+# ADS
+
+![w:700](images/beckhoff/ads.png)
+
+---
+
+<!-- _class: sectionpage -->
+
+# Descrizione hardware
+
+---
+
+# CX9020 | Basic CPU module
+
+![](images/beckhoff/cx9020.png)
+
+---
+
+<!-- _class: small -->
+
+# EL1008 | 8-channel digital input
+
+<div class="columns">
+  <div>
+
+  - EL1008 è un terminale EtherCAT a 8 canali che acquisisce segnali di controllo binario a 24 V dal livello di processo.
+  - Caratteristiche elettriche:
+    - 24 V DC (-15 %/+20 %)
+    - "0" signal voltage	-3…+5 V
+    - "1" signal voltage	11…30 V
+    - Corrente di input 3 mA
+  </div>
+  <div>
+
+  ![](images/beckhoff/el1008.png)
+  </div>
+</div>
+
+---
+
+<!-- _class: small -->
+
+# EL2008 | 8-channel digital output
+
+<div class="columns">
+  <div>
+
+  - EL2008 è un terminale EtherCAT a 8 canali che connette i segnali binari di permette di connettere segnali di controllo a 24 V DC con gli attuatori.
+  - Caratteristiche elettriche:
+    - 24 V DC (-15 %/+20 %)
+    - Corrente massima di output 500 mA
+  </div>
+  <div>
+
+  ![](images/beckhoff/el2008.png)
+  </div>
+</div>
+
+---
+
+<!-- _class: sectionpage -->
+
+# Installazione di TwinCAT
+
+---
+
+# Requisiti di Sistema
+
+- Sistema operativo: Windows 7 o superiore
+- CPU: 1.8 GHZ o superiore con almeno 2 Core (raccomandato Intel)
+- RAM: 4 GB
+- Spazio su disco: almeno 10 GB
+- Intel Virtualization Technology (VT-x) abilitato e Hyper-Threading disabilitato
+
+---
+
+# Installazione
+
+- Visitare il sito https://www.beckhoff.com/it-it/support/download-finder/software-and-tools/ e registrarsi con un indirizzo email valido
+- Scaricare il file eseguibile chiamato eXtended Automation Engineering (XAE) della dimensione 1,4 GB (il file XAE include anche la parte XAR descritta in precedenza)
+- Effettuare un doppio click sul file e seguire le istruzioni a video. Selezionare le opzioni visualizate nelle slide seguenti
+
+---
+
 # Creazione di un nuovo progetto
 
 <div class="columns">
