@@ -211,19 +211,34 @@ TwinCAT è diviso in due moduli:
 
 ---
 
-# Creazione di un nuovo progetto
+# Installazione
 
 <div class="columns">
   <div>
 
-  - Premere il pulsante **Crea** 
-  - Selezionare **Circuito**
-  - Per aggiungere un componente, fare click sul componente e posizionarlo nel layout del progetto a sinistra
- 
+  ![](images/beckhoff/installazione_1.png)
+
   </div>
   <div>
 
-  ![](images/udax-arduino/progetto.png)
+  ![](images/beckhoff/installazione_2.png)
+  </div>
+</div>
+
+---
+
+# Installazione
+
+<div class="columns">
+  <div>
+
+  ![](images/beckhoff/installazione_3.png)
+
+  </div>
+  
+  <div>
+
+  ![](images/beckhoff/installazione_4.png)
   </div>
 </div>
 
