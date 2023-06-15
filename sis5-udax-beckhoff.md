@@ -47,8 +47,6 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 
 ---
 
-<!-- _class: small -->
-
 # Beckhoff
 
 - La multinazionale Beckhoff realizza sistemi di automazione con tecnologia di controllo basata su PC. 
@@ -243,328 +241,215 @@ TwinCAT è diviso in due moduli:
 </div>
 
 ---
+# Post installazione
+
+- Se il sistema operativo è Windows 8 o superiore, sarà necessario eseguire uno script al termine dell'installazione.
+- Posizionarsi nel percorso C:\TwinCAT\3.1\System
+- Fare click con il tasto destro del mouse sul file **win8settick**
+- Selezionare **Esegui come amministratore**
+- Riavviare il computer
+
+---
+
+# Verifica modulo XAR
+
+- Al termine dell'installazione è possibile verificare il corretto funzionamento di TwinCAT XAR effettuando il passaggio a **Config mode** e **Run mode** ovvero le due modalità operative di funzionamento di TwinCAT.
+- Individuare l'icona di TwinCAT nell'area di notifica
+- Fare click con il tasto destro del mouse e selezionare **System/Start Restart**
+- L'icona diventerà verde
+
+---
+
+# Verifica modulo XAR
+
+<div class="columns three-columns">
+
+  ![](images/beckhoff/xar_1.png)
+
+  ![](images/beckhoff/xar_2.png)
+  
+  ![](images/beckhoff/xar_3.png)
+
+</div>
+
+---
 
 <!-- _class: sectionpage -->
 
-# Lampeggio LED integrato
+# Creazione ed esecuzione di un progetto
 
 ---
 
-# Istruzioni
+# Descrizione del progetto
 
 
-- Aggiungere al progetto un componente **Arduino Uno R3**
-- Premere il pulsante **Codice** in alto a destra. 
-- Scegliere dal menù a discesa la voce **Testo**
-- Non è necessario modificare il codice proposto
-- Premere il pulsante **Avvia simulazione**. Si può notare il LED chiamato **L** lampeggiare, restando acceso per un secondo e spento per un altro secondo.
+- In questo primo progetto, programmeremo una macchina che può essere avviata tramite un pulsante di avvio e arrestata tramite un pulsante di arresto. Lo stato di macchina avviata sarà segnalato tramite l'accensione di un indicatore luminoso.
 
 ---
 
+# Creazione di un progetto
 
-# Schema Elettrico
-
-![](images/udax-arduino/led_integrato_schema.png)
+- Fare click con il tasto destro del mouse sull'icone di TwinCAT nell'area di notifica e selezionare **TwinCAT XAE**. Attendere alcuni minuti l'apertura a seconda della velocità del proprio PC.
+- Selezionare File -> Nuovo -> Progetto
+- Selezionare TwinCAT Projects e poi TwinCAT XAE project.
+- Assegnare un nome al progetto ed alla soluzione (possono coincidere) e premere Ok
 
 ---
 
-# Variazioni
+# Creazione di un progetto
+
+![w:700](images/beckhoff/progetto_1.png)
+
+---
+
+<!-- _class: small -->
+
+# Organizzazione progetto
+
+Tutti i file del progetto sono organizzati nel pannello **Esplora soluzioni**. Il nodo principale è la **Soluzione** ovvero un contenitore di progetti di Visual Studio. All'interno del progetto vi è un solo progetto, ma è possibile aggiungere progetto di varia natura, come ad esempio una HMI C#. Sotto il progetto possiamo trovare:
+
+- **System**: Gestisce il runtime, le licenze e i core utilizzati dai processi
+- **Motion**: Contiene i task e gli assi di movimento (Es. interfaccia con motori)
+- **Safety**: Contiene la logica di sicurezza (Ad esempio interfaccia con il dispositivo EL6900)
+- **PLC**: Contiene i progetti PLC con le variabili e le logiche associate
+- **C++**: Permette di scrivere codice C++ da eseguire a runtime
+- **I/O**: Permette di configurare i dispositivi di Input/Output ed effettuare le associazioni tra il modulo PLC e le varie periferiche
+
+---
+
+# Schermata principale progetto
+
+![w:700](images/beckhoff/progetto_2.png)
+
+---
+
+# Creazione di un progetto PLC
+
+In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire più PLC su un singolo computer e separarne l'esecuzione sui singole Core della CPU.
+- Fare click con il tasto destro sul nodo PLC nel pannello **Esplora Soluzioni** e selezionare **Aggiungi un nuovo Elemento**.
+- Inserire un nome per il progetto (ad esempio PLC 1), selezionare **Progetto PLC Standard** e premere **Aggiungi**
+
+---
+
+# Creazione di un progetto PLC
+
+![w:700](images/beckhoff/progetto_3.png)
+
+---
+
+<!-- _class: small -->
+
+# Struttura di un progetto PLC
+
+- **External Types**: cartella usata solo per applicazioni particolari
+- **References**: contiene i riferimenti alle librerie esterne, come ad esempio quelle di Motion Control
+- **DUTs (Data Unit Type)**: contiene le strutture definite dall'utente
+- **GVLs (Global Variable List)**: contiene le liste da variabili globali, ovvero accessibili ovunque all'interno del progetto
+- **POUs (Program Organization Unit)**: Contiene la logica del PLC. Ci sono tre tipi di POU: programmi, blocchi funzionali e funzioni. In fase di creazione del progetto viene automaticamente creata una POU chiamata MAIN
+- **VISUs (Visualization)**: contiene le schermate di visualizzazione HMI (Human Machine Interface)
+- **PLCTask**: Contiene i Task che eseguiranno i codice all'interno del Runtime di TwinCAT. In fase di creazione del progetto viene automaticamente creato un Task per l'esecuzione della POU MAIN
+
+---
+
+# Struttura di un progetto PLC
+
+![w:400](images/beckhoff/progetto_4.png)
+
+---
+
+# Task
+
+- Un Task ha degli attributi che possono essere modificati nella sezione **SYSTEM -> Tasks** del pannello **Esplora soluzioni**.
+- Un parametro importante è quello denominato **Marcatori ciclo** che corrisponde al tempo che intercorre tra due successive esecuzioni del Task espresso a sua volta in multipli di un altro parametro detto **Base Time**
+
+---
+
+# Task
 
 <div class="columns">
-<div>
 
-- Modificare il codice di Arduino con il seguente frammento. Cosa cambia?
-- Provare a modificare il programma per ottenere un risultato diverso.
+  ![w:400](images/beckhoff/task_1.png)
+  
+  ![w:400](images/beckhoff/task_2.png)
 
-</div>
-<div>
-
-```cpp
-void setup()
-{
-  pinMode(LED_BUILTIN, OUTPUT);
-}
-
-void loop()
-{
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(2000); // Wait for 2000 millisecond(s)
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(2000); // Wait for 2000 millisecond(s)
-}
-```
-
-</div>
 </div>
 
 ---
 
-<!-- _class: sectionpage -->
+# Real-time
 
-# Lampeggio LED esterno
+- TwinCAT XAR viene eseguito nel modo di esecuzione ring 0 ovvero nel kernel mode, mentre TwinCAT XAE viene eseguito nel modo di esecuzione ring 3, ovvero user mode
+- Il runtime registra un interrupt per forzare la sua esecuzione ad intervalli regolari (detto clock). Le routine di interrupt vengono eseguite a kernel mode. Il runtime esegue i Task che a loro volta possono eseguire i programmi PLC, effettuare controllo del movimento, interfacciarsi con le periferiche Ethercat o comunicare con le HMI.
+- Questa routine ha priorità sui programmi in user mode, come ad esempio TwinCAT XAE oppure le HMI
 
 ---
 
 <!-- _class: small -->
 
-# Istruzioni
+# Configurazione real-time
 
-- Aggiungere al progetto un componente **Arduino Uno R3**
-- Aggiungere al progetto una **breadboard piccola**, un **resistore** dal valore di 220 Ω ed un LED seguendo lo schema elettrico.
-- Effettuare i collegamenti seguendo lo schema elettrico e rispettando
-l'orientamento del LED.
-- Premere il pulsante **Codice** in alto a destra.
-- Scegliere dal menù a discesa la voce Testo
-- Modificare il codice secondo quanto riportato nelle slide successive
-- Premere il pulsante Avvia simulazione. Si può notare il LED esterno lampeggiare, restando acceso per un secondo e spento per un altro secondo.
+- Per modificare il comportamento real-time di TwinCAT, effettuare un doppio click nella sezione SYSTEM -> Tasks del pannello Esplora soluzioni. 
+- Se è la prima volta che si visita questa sezione, premere il pulsante **Read from Target** per leggere la configurazione dal PC corrente
+- Se si dispone di una CPU multi-core, è consigliato allocare uno dei core ad uso esclusivo di TwinCAT. Per fare ciò, utilizzare il pulsante **Set on Target** e ridurre di un'unità il numero di Core disponibili per Windows. Al termine verrà richiesto di riavviare il computer. Dopo il riavvio, sarà possibile selezionare il core di tipo **Isolated**  dalla lista dei core disponibili.
+- È possibile modificare il Base Time da 1 ms a 0,5 ms e il numero di Marcatori Ciclo da 10 a 1 (sotto la voce **SYSTEM -> Tasks**)  se si necessitano tempi di esecuzione più veloci rispetto ai 10 ms di default
 
 ---
 
+# Finestra di configurazione real-time
 
-# Schema Elettrico
-
-![](images/udax-arduino/led_esterno_schema.png)
+![](images/beckhoff/realtime_1.png)
 
 ---
 
+# Read from Target
 
-# Codice
+![](images/beckhoff/realtime_2.png)
 
-```cpp
-void setup()
-{
-  pinMode(3, OUTPUT);
-}
-
-void loop()
-{
-  digitalWrite(3, HIGH);
-  delay(1000); // Wait for 1000 millisecond(s)
-  digitalWrite(3, LOW);
-  delay(1000); // Wait for 1000 millisecond(s)
-}
-```
 ---
 
-
-# Variazioni
+# Set on Target
 
 <div class="columns">
-<div>
 
-- Collegare un secondo LED alla porta 4. Modificare il codice di Arduino con il seguente frammento. Cosa cambia?
-- Provare a modificare il circuito ed il programma per realizare un semaforo.
-</div>
-<div>
-
-```cpp
-void setup()
-{
-  pinMode(3, OUTPUT);
-  pinMode(4, OUTPUT);
-}
-void loop()
-{
-  digitalWrite(3, HIGH);
-  digitalWrite(4, LOW);
-  delay(1000); // Wait for 1000 millisecond(s)
-  digitalWrite(3, LOW);
-  digitalWrite(4, HIGH);
-  delay(1000); // Wait for 1000 millisecond(s)
-}
-```
+  ![](images/beckhoff/realtime_3.png)
+  
+  ![](images/beckhoff/realtime_4.png)
 
 </div>
-</div>
 
 ---
 
-<!-- _class: sectionpage -->
+# Creare una GVL
 
-# Accensione LED graduale con potenziometro
-
----
-
-<!-- _class: small -->
-
-# Istruzioni
-
-- Aggiungere al progetto un componente Arduino Uno R3
-- Aggiungere al progetto una breadboard piccola, una resistenza dal
-valore di 220 Ω, un LED ed un potenziometro seguendo lo schema
-elettrico.
-- Effettuare i collegamenti seguendo lo schema elettrico e rispettando
-l'orientamento del LED.
-- Premere il pulsante Codice in alto a destra.
-- Scegliere dal menù a discesa la voce Testo e modificare il codice secondo quanto riportato nelle slide successive
-- Premere il pulsante Avvia simulazione. Si può notare il LED esterno
-diventare più o meno luminoso a seconda della rotazione del
-potenziometro
+- Una GVL (Global Variable List) contiene variabili accessibili da tutto il progetto PLC.
+- Fare click con il tasto destro nella cartella GVLs del progetto PLC nel pannello **Esplora Soluzioni** e selezionare **Add -> Global Variable List**
+- Inserire un nome alla GVL, come ad esempio GVL_Grinding
+- Fare click sul tasto Apri. La nuova GVL verrà creata e aperta per la modifica.
 
 ---
 
-# Schema Elettrico
-
-![](images/udax-arduino/led_potenziometro_schema.png)
-
----
-
-# Codice
-
-```cpp
-#define pinLed 3
-#define pinPot A0
-
-void setup()
-{
-  pinMode(pinLed, OUTPUT);
-  pinMode(pinPot, INPUT);
-}
-
-void loop()
-{
-  // analogRead value is between 0-1023
-  byte value = analogRead(pinPot)/4;
-  // analogWrite value is between 0-255
-  analogWrite(pinLed, value);
-  delay(10);
-}
-```
----
-
-<!-- _class: sectionpage -->
-
-# Accensione LED con pulsante
-
----
-
-<!-- _class: small -->
-
-# Istruzioni
-
-- Aggiungere al progetto un componente Arduino Uno R3
-- Aggiungere al progetto una breadboard piccola, una resistenza dal valore di 220 Ω, un LED, un pulsante ed un'altra resistenza da 10 kΩ (chiamata di pull-down) seguendo lo schema elettrico.
-- Effettuare i collegamenti seguendo lo schema elettrico e rispettando l'orientamento del LED. 
-- Premere il pulsante Codice in alto a destra. 
-- Scegliere dal menù a discesa la voce Testo
-- Modificare il codice secondo quanto riportato nelle slide successive
-- Premere il pulsante Avvia simulazione. Si può notare il LED esterno si accende quando il tasto è premuto e si spegne quando il tasto non è premuto.
-
----
-
-
-# Schema Elettrico
-
-![](images/udax-arduino/led_pulsante_schema.png)
-
----
-
-# Codice
-
-
-```cpp
-#define pinLed 3
-#define pinButt 2
-
-void setup() {
-  pinMode(pinLed, OUTPUT);
-  pinMode(pinButt, INPUT);
-}
-void loop() {
-  bool buttonValue = digitalRead(pinButt);
-  if (buttonValue) {
-    digitalWrite(pinLed, HIGH );
-  }
-  else {
-    digitalWrite(pinLed, LOW );
-  }
-  delay(100); // Wait for 100 millisecond(s)
-}
-```
----
-
-# Variazioni
+# Creare una GVL
 
 <div class="columns">
-<div>
 
-- Verificare che il
-frammento di codice
-accanto porta allo stesso
-risultato. Perché?
-</div>
-<div>
+  ![](images/beckhoff/progetto_5.png)
+  
+  ![w:350](images/beckhoff/progetto_6.png)
 
-```cpp
-#define pinLed 3
-#define pinButt 2
-
-void setup() {
-  pinMode(pinLed, OUTPUT);
-  pinMode(pinButt, INPUT);
-}
-
-void loop() {
-  digitalWrite(pinLed, digitalRead(pinButt));
-  delay(100); // Wait for 100 millisecond(s)
-}
-```
-
-</div>
 </div>
 
 ---
-
-<!-- _class: sectionpage -->
-
-# Fotoresistore
-
----
-
-# Istruzioni
 
 <!-- _class: small -->
 
-- Aggiungere al progetto un componente Arduino Uno R3
-- Aggiungere al progetto una breadboard piccola, una resistenza dal valore di 220 Ω, un LED, un fotoresistore ed un'altra resistenza da 10 kΩ seguendo lo schema elettrico.
-- Effettuare i collegamenti seguendo lo schema elettrico e rispettando l'orientamento del LED. 
-- Premere il pulsante Codice in alto a destra. 
-- Scegliere dal menù a discesa la voce Testo
-- Modificare il codice secondo quanto riportato nelle slide successive
-- Premere il pulsante Avvia simulazione. Si può notare il LED esterno diventare più o meno luminoso a seconda della luminosità rilevata dal fotoresistore (modificabile anch'essa con un cursore apposito)
+# Creare una GVL
 
----
+<div class="columns">
 
-# Schema Elettrico
+  - Creare tre variabili di tipo BOOL (possono contenere i valori TRUE o FALSE) come da immagine. 
+  - La prima variabile (GrindingWheelMS) rappresenta l'avvio del motore che accende la macchina rettificatrice ed è una variabile di output (%Q*). La macchina resterà in movimento finchè questa variabile è TRUE . 
+  - Le altre due variabili sono di input (%I*). rappresentano gli input dei pulsanti di start e stop.
 
-![](images/udax-arduino/led_fotoresistore_schema.png)
+  ![w:350](images/beckhoff/progetto_7.png)
 
----
-
-# Codice
-
-```cpp
-#define pinLed 3
-#define pinFoto A0
-
-void setup() {
-  pinMode(pinLed, OUTPUT);
-  pinMode(pinFoto, INPUT);
-}
-
-void loop() {
-  analogWrite(pinLed,(analogRead(pinFoto)/4));
-  delay(100);
-}
-```
----
-
-<!-- _class: sectionpage -->
-
-# Approfondimenti
-
----
-
-# RGB LEDs
-
-[![w:700 RGB LEDs With Arduino in Tinkercad](images/udax-arduino/video.jpeg)](https://www.youtube.com/watch?v=YqHkULDmmGU "RGB LEDs With Arduino in Tinkercad")
+</div>

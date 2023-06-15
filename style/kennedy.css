@@ -14,7 +14,7 @@
 
 /***************** COMMON STRUCTURE **********************/
 
-:root {
+section {
   --color-foreground: #FFFFFF;
   --color-highlight: #FA0000;
   --red-color: #FA0000;
@@ -25,6 +25,7 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  font-size: 33px;
 }
 
 header {
@@ -41,8 +42,8 @@ header img {
   content: url("images/logo_small.png");
 }
 
-section:before{
-  content:'';
+section:before {
+  content: '';
   background-color: var(--red-color);
   width: 100%;
   height: 100%;
@@ -51,7 +52,7 @@ section:before{
   z-index: 0;
   margin-left: -120px;
   margin-top: -120px !important;
-  margin-bottom: -50px; 
+  margin-bottom: -50px;
 }
 
 .spacer {
@@ -69,12 +70,16 @@ code {
   gap: 40px;
 }
 
-ol {
-  list-style: none; 
-  counter-reset: item; 
+.three-columns {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-ol > li:before {
+ol {
+  list-style: none;
+  counter-reset: item;
+}
+
+ol>li:before {
   content: counter(item) ". ";
   counter-increment: item;
   color: var(--red-color);
@@ -104,7 +109,7 @@ ul {
   margin-block-end: 0.5em;
 }
 
-section:not(.titlepage):not(.sectionpage) > h1:first-of-type {
+section:not(.titlepage):not(.sectionpage)>h1:first-of-type {
   position: absolute;
   top: 0px;
   left: 120px;
@@ -115,21 +120,22 @@ section:not(.titlepage):not(.sectionpage) > h1:first-of-type {
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-size: 1.7rem;
 }
 
-section > p > img,
+section>p>img,
 .columns img,
-section > p > a > img {
+section>p>a>img {
   display: block;
   margin: auto;
 }
 
-section > p > img,
-section > p > a > img {
+section>p>img,
+section>p>a>img {
   width: 1000px;
 }
 
-.columns img{
+.columns img {
   width: 100%;
 }
 
@@ -139,8 +145,8 @@ table thead th {
 }
 
 table th,
-table td{
-    border-color: #777777;
+table td {
+  border-color: #777777;
 }
 
 /* ------------------- SMALL -----------------------------*/
@@ -173,15 +179,15 @@ section.titlepage header img {
   content: url("images/logo_small_white.png");
 }
 
-section.titlepage::after{
+section.titlepage::after {
   display: none;
 }
 
-section.titlepage::before{
+section.titlepage::before {
   display: none;
 }
 
-section.titlepage .shape{
+section.titlepage .shape {
   background-color: var(--red-color);
   width: 100%;
   height: 100%;
@@ -190,15 +196,15 @@ section.titlepage .shape{
   z-index: 0;
   margin-top: -50px !important;
   margin-left: -120px;
-  margin-bottom: -50px; 
+  margin-bottom: -50px;
 }
 
-section.titlepage h1{
+section.titlepage h1 {
   max-width: 650px;
   font-size: 2.3rem;
 }
 
-section.titlepage h2{
+section.titlepage h2 {
   max-width: 750px;
 }
 
@@ -217,8 +223,8 @@ section.sectionpage header img {
   content: url("images/logo_small_white.png");
 }
 
-section.sectionpage:before{
-  content:'';
+section.sectionpage:before {
+  content: '';
   background-color: white;
   width: 100%;
   height: 100%;
@@ -227,12 +233,12 @@ section.sectionpage:before{
   z-index: 0;
   margin-top: 0px !important;
   margin-left: -120px;
-  margin-bottom: -50px; 
+  margin-bottom: -50px;
 }
 
 section.sectionpage h1 {
-    font-size: 2.3rem;
-    max-width: 900px;
+  font-size: 2.2rem;
+  max-width: 900px;
 }
 
 /***************** highlightjs **********************/
