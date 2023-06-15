@@ -450,6 +450,117 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
   - La prima variabile (GrindingWheelMS) rappresenta l'avvio del motore che accende la macchina rettificatrice ed è una variabile di output (%Q*). La macchina resterà in movimento finchè questa variabile è TRUE . 
   - Le altre due variabili sono di input (%I*). rappresentano gli input dei pulsanti di start e stop.
 
-  ![w:350](images/beckhoff/progetto_7.png)
+  ![](images/beckhoff/progetto_7.png)
 
 </div>
+
+---
+
+<!-- _class: small -->
+
+# Creare una POU in LD
+
+- Una POU (Program Organization Unit)  la logica del PLC .Possiamo notare che una POU chiamata MAIN è già stata creata in fase di creazione del progetto
+- Fare click con il tasto destro nella cartella POUs del progetto PLC nel pannello Esplora Soluzioni e selezionare Add -> POU
+- Inserire un nome per il programma RunGrindingWheel, selezionare il tipo Programma ed il linguaggio di programmazione Ladder Logic Diagram (LD) chiamato anche Linguaggio a contatti
+- Fare click sul tasto Apri. La nuova POU verrà creata e aperta per la modifica.
+- La finestra è divisa in due parti: la prima parte permette di dichiarare variabili visibili solo all'interno della POU. La seconda parte è dove verrà inserita la logica Ladder.
+
+---
+
+# Creare una POU in LD
+
+<div class="columns">
+
+  ![](images/beckhoff/progetto_8.png)
+
+  ![w:300](images/beckhoff/progetto_9.png)
+
+</div>
+
+---
+
+# Linguaggio Ladder
+
+- Il linguaggio Ladder è stato il primo linguaggio disponibile per programma i PLC. Si basa su simboli di provenienza "elettrica": binari di potenza (power rail), contatti elettrici (contact) e avvolgimenti magnetici (coil)
+- È costituito in linee verticali dette **rung**. Ciascun rung può contenere **contatti**, **coil**, **Function Block** e **Funzioni**
+- Ciascun **rung** deve essere connesso necessariamente al binario di potenza sinistro (left power rail), mentre il collegamento con quello destro è opzionale
+
+---
+
+# Scrivere la logica in Ladder 1
+
+- Premere con il tasto destro sulla rung e selezionare Inserire bobina dal menù contestuale, oppure cliccare sul simbolo della bobina nel menù Ladder in alto (se non è presente è possibile aggiungerla cliccando con il tasto destro su una sezione vuota). Al posto dei punti di domanda va inserito il nome della variabile  GVL_Grinding.GrindingWheelMS
+- Per inserire il pulsante di start, premere con il tasto destro sulla rung e selezionare Inserire contatto dal menù contestuale. Al posto dei punti di domanda, inserire il nome della variabile GVL_Grinding.StartGrindingWheelPB.
+
+---
+
+# Scrivere la logica in Ladder 2
+
+- Inserire un circuito di ritenuta premendo con il tasto destro sulla rung e selezionare Inserire contatto parallelo (sotto) dal menù contestuale. Al posto dei punti di domanda, inserire il nome della variabile. GVL_Grinding.GrindingWheelMS
+- Infine, inserire il pulsante di stop tramite premendo con il tasto destro sulla rung dopo i due rami paralleli e selezionare Inserire contatto negato dal menù contestuale. Al posto dei punti di domanda, inserire il nome della variabile GVL_Grinding.StopGrindingWheelPB
+
+---
+
+# Scrivere la logica in Ladder
+
+![](images/beckhoff/progetto_10.png)
+
+---
+
+# Modifica del programma MAIN
+
+- Per poter eseguire la POU RunGrindingWheel ad ogni esecuzione del Task, è necessario modificare il programma MAIN e chiamare la POU RunGrindingWheel
+- Fare doppio click su MAIN nella cartella POUs del progetto PLC ed inserire nella parte inferiore il seguente testo: RunGrindingWheel();
+- La riga appena scritta è una istruzione scritta in linguaggio ST (Structured Text o Testo Strutturato).
+
+---
+
+<!-- _class: small -->
+
+# Download del programma ed esecuzione
+
+- Compilare il programma facendo click su Compila -> Compila soluzione nella barra dei menù
+- Verificare che nella schermata di Output ci sia il messaggio:  **Compilazione: 2 completate o aggiornate, 0 non riuscite, 0 ignorate**
+- Una volta compilato correttamente il programma, è necessario lanciare il comando TwinCAT -> Activate Configuration, che si occupa di:
+  - Fermare il runtime di TwinCAT 3 runtime (tutti i programmi verranno arrestati ed i dispositivi di I/O spenti)
+  - Applicare la configurazione realtime (numero di  core, task, etc.)
+  - Copiare il programma compilato sulla runtime
+  - Applicare la configurazione di mapping 
+  - Riavviare il runtime di TwinCAT  in run mode
+
+---
+
+# Gestione licenza e avvio in Run mode
+
+- Dato che non è stata acquistata alcuna licenza, verrò richiesto di generare una licenza di trial. Questo messaggio comparirà ogni 7 giorni.
+- Nella finestra, premere il pulsante Sì ed inserire il captcha
+
+![w:400](images/beckhoff/progetto_11.png)
+
+- Alla richiesta di riavviare il sistema in Run mode, premere Sì
+
+---
+
+# Esecuzione programma
+
+- Una volta generate le licenze ed attivata correttamente la configurazione, l'icone di TwinCAT nell'area di notifica sarà colorata di verde. 
+- Per poter eseguire l'applicazione ed effettuare il debug, bisogna andare Online. Fare click su PLC -> Login oppure facendo click sul simbolo verde con la porta e la freccia . - - Quando viene richiesto di caricare l'applicazione sul PLC, premere Sì
+- Far partire l'applicazione facendo click su PLC -> Start nella barra dei menù oppure usando il tasto verde con il simbolo Play
+
+---
+
+# Modifica delle variabili e debug
+
+<!-- _class: small -->
+
+- Una volta online ed avviato il programma, fare doppio click sulla POU RunGrindingWheel per vedere lo stato delle variabili e modificarle.
+- Possiamo simulare la pressione del pulsante di start facendo doppio click sul contatto corrispondente (il valore diventa TRUE) e facendo poi click su PLC -> Scrivi valori (anche accessibile dalla toolbar in alto). Vedremo la variabile GVL_Grinding.GrindingWheelMS colorarsi di blu (valore TRUE)
+- Simuliamo il rilascio del pulsante di start scrivendo un valore FALSE. Noteremo che la variabile di uscita rimane colorata di blu (valore TRUE)
+- Simuliamo la pressione del pulsante di stop ed il suo rilascio allo stesso modo. Noteremo che la variabile di uscita torna ad essere colorata di bianco (valore FALSE)
+
+---
+
+# Modifica delle variabili e debug
+
+![](images/beckhoff/progetto_12.png)
