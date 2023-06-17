@@ -360,7 +360,9 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
 # Task
 
 - Un Task ha degli attributi che possono essere modificati nella sezione **SYSTEM -> Tasks** del pannello **Esplora soluzioni**.
-- Un parametro importante è quello denominato **Marcatori ciclo** che corrisponde al tempo che intercorre tra due successive esecuzioni del Task espresso a sua volta in multipli di un altro parametro detto **Base Time**
+- Un parametro importante è quello denominato **Cycle time** che corrisponde al tempo che intercorre tra due successive esecuzioni del Task espresso a sua volta in multipli di un altro parametro detto **Base Time**
+- È possibile modificare il Base Time e il Cycle Time se necessario ma bisogna considerare che la durata della singola esecuzione dev'essere inferiore al Cycle Time
+
 
 ---
 
@@ -384,15 +386,11 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
 
 ---
 
-<!-- _class: small -->
-
 # Configurazione real-time
 
 - Per modificare il comportamento real-time di TwinCAT, effettuare un doppio click nella sezione SYSTEM -> Tasks del pannello Esplora soluzioni. 
 - Se è la prima volta che si visita questa sezione, premere il pulsante **Read from Target** per leggere la configurazione dal PC corrente
-- Se si dispone di una CPU multi-core, è consigliato allocare uno dei core ad uso esclusivo di TwinCAT. Per fare ciò, utilizzare il pulsante **Set on Target** e ridurre di un'unità il numero di Core disponibili per Windows. Al termine verrà richiesto di riavviare il computer. Dopo il riavvio, sarà possibile selezionare il core di tipo **Isolated**  dalla lista dei core disponibili.
-- È possibile modificare il Base Time da 1 ms a 0,5 ms e il numero di Marcatori Ciclo da 10 a 1 (sotto la voce **SYSTEM -> Tasks**)  se si necessitano tempi di esecuzione più veloci rispetto ai 10 ms di default
-
+- Se si dispone di una CPU multi-core, è consigliato allocare uno dei core ad uso esclusivo di TwinCAT. Per fare ciò, utilizzare il pulsante **Set on Target** e ridurre di un'unità il numero di Core disponibili per Windows. Dopo il riavvio del PC, sarà possibile selezionare il core di tipo **Isolated**  dalla lista dei core disponibili.
 ---
 
 # Finestra di configurazione real-time
@@ -414,6 +412,19 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
   ![](images/beckhoff/realtime_3.png)
   
   ![](images/beckhoff/realtime_4.png)
+
+</div>
+
+---
+
+# Configurazione dei Task
+
+<div class="columns">
+
+  - Una volta definiti i core utilizzati, è possibile associare ciascuno dei processi ad uno specifico core in modo da suddividere il carico
+  - In fase di creazione e configurazione del progetto vengono automaticamente creati i Task necessari.
+  
+  ![](images/beckhoff/realtime_5.png)
 
 </div>
 
