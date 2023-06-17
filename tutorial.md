@@ -334,3 +334,9 @@ Banana | Yellow | 4 | £1.00
 Apple | Red | 2 | £0.60
 Orange | Orange | 10 | £2.50
 Coconut | Brown | 1 | £1.50
+
+---
+
+---
+
+> Dorothy followed her through many of the beautiful rooms in her castle.

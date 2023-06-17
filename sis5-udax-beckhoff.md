@@ -564,3 +564,4 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
 # Modifica delle variabili e debug
 
 ![](images/beckhoff/progetto_12.png)
+

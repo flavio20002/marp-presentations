@@ -149,6 +149,18 @@ table td {
   border-color: #777777;
 }
 
+blockquote {
+  margin: 0;
+  padding: 1em;
+  background-color: #d8ecf7;
+}
+
+blockquote::after,
+blockquote::before {
+  content: none;
+}
+
+
 /* ------------------- SMALL -----------------------------*/
 
 section.small li,
