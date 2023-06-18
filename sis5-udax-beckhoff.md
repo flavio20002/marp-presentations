@@ -32,12 +32,9 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 
 # Sommario
 
-- [Tinkercad](#thinkercad)
-- [Lampeggio LED integrato](#lampeggio-led-integrato)
-- [Lampeggio LED esterno](#lampeggio-led-esterno)
-- [Accensione LED graduale con potenziometro](#accensione-led-graduale-con-potenziometro)
-- [Accensione LED con pulsante](#accensione-led-con-pulsante)
-- [Fotoresistore](#fotoresistore)
+- [Introduzione](#introduzione)
+- [Descrizione Hardware](#descrizione-hardware)
+
 
 ---
 
@@ -68,7 +65,7 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 
 ---
 
-# Sedi Beckoff
+# Sedi Beckhoff
 
 ![w:800](images/beckhoff/sedi.jpg)
 
@@ -107,7 +104,7 @@ TwinCAT è diviso in due moduli:
 
 - EtherCAT (Ethernet for Control Automation Technology) è una tecnologia Ethernet industriale deterministica sviluppata originariamente da Beckhoff Automation. Il protocollo EtherCAT, pubblicato nello standard IEC61158, soddisfa requisiti real-time nell'automazione, in sistemi di test e di misura e in molte altre applicazioni.
 - I telegrammi EtherCAT hanno la stessa struttura di un telegramma Ethernet TCP/IP (46÷1500 byte).
-- Il master EtherCAT invia un telegramma che attraversa tutti i nodi. Ogni slave EtherCAT legge i dati di uscita ad esso destinati e scrive quelli da esso prodotti nel frame “al volo”, mentre quest’ultimo si propaga verso i nodi successivi. Il ritardo subito dal frame è pari al solo tempo di attraversamento fisico dello slave. L’ultimo nodo in un segmento o linea di caduta reinvia il messaggio al master avvalendosi della comunicazione full-duplex di Ethernet.
+- Il master EtherCAT invia un telegramma che attraversa tutti i nodi. Ogni slave EtherCAT legge i dati di uscita ad esso destinati e scrive quelli da esso prodotti nel frame “al volo”, mentre quest’ultimo si propaga verso i nodi successivi. Il ritardo subito dal frame è pari al solo tempo di attraversamento fisico dello slave. L’ultimo nodo in un segmento o linea di caduta rinvia il messaggio al master avvalendosi della comunicazione full-duplex di Ethernet.
 
 ---
 
@@ -187,6 +184,20 @@ TwinCAT è diviso in due moduli:
 
 <!-- _class: sectionpage -->
 
+# Lo standard IEC 61131
+
+---
+
+# Linguaggio Ladder
+
+- Il linguaggio Ladder è stato il primo linguaggio disponibile per programma i PLC. Si basa su simboli di provenienza "elettrica": binari di potenza (power rail), contatti elettrici (contact) e avvolgimenti magnetici (coil)
+- È costituito in linee verticali dette **rung**. Ciascun rung può contenere **contatti**, **coil**, **Function Block** e **Funzioni**
+- Ciascun **rung** deve essere connesso necessariamente al binario di potenza sinistro (left power rail), mentre il collegamento con quello destro è opzionale
+
+---
+
+<!-- _class: sectionpage -->
+
 # Installazione di TwinCAT
 
 ---
@@ -205,7 +216,7 @@ TwinCAT è diviso in due moduli:
 
 - Visitare il sito https://www.beckhoff.com/it-it/support/download-finder/software-and-tools/ e registrarsi con un indirizzo email valido
 - Scaricare il file eseguibile chiamato eXtended Automation Engineering (XAE) della dimensione 1,4 GB (il file XAE include anche la parte XAR descritta in precedenza)
-- Effettuare un doppio click sul file e seguire le istruzioni a video. Selezionare le opzioni visualizate nelle slide seguenti
+- Effettuare un doppio click sul file e seguire le istruzioni a video. Selezionare le opzioni visualizzate nelle slide seguenti
 
 ---
 
@@ -289,7 +300,7 @@ TwinCAT è diviso in due moduli:
 
 # Creazione di un progetto
 
-- Fare click con il tasto destro del mouse sull'icone di TwinCAT nell'area di notifica e selezionare **TwinCAT XAE**. Attendere alcuni minuti l'apertura a seconda della velocità del proprio PC.
+- Fare click con il tasto destro del mouse sull'icona di TwinCAT nell'area di notifica e selezionare **TwinCAT XAE**. Attendere alcuni minuti l'apertura a seconda della velocità del proprio PC.
 - Selezionare File -> Nuovo -> Progetto
 - Selezionare TwinCAT Projects e poi TwinCAT XAE project.
 - Assegnare un nome al progetto ed alla soluzione (possono coincidere) e premere Ok
@@ -458,7 +469,7 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
 <div class="columns">
 
   - Creare tre variabili di tipo BOOL (possono contenere i valori TRUE o FALSE) come da immagine. 
-  - La prima variabile (GrindingWheelMS) rappresenta l'avvio del motore che accende la macchina rettificatrice ed è una variabile di output (%Q*). La macchina resterà in movimento finchè questa variabile è TRUE . 
+  - La prima variabile (GrindingWheelMS) rappresenta l'avvio del motore che accende la macchina rettificatrice ed è una variabile di output (%Q*). La macchina resterà in movimento finché questa variabile è TRUE . 
   - Le altre due variabili sono di input (%I*). rappresentano gli input dei pulsanti di start e stop.
 
   ![](images/beckhoff/progetto_7.png)
@@ -488,14 +499,6 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
   ![w:300](images/beckhoff/progetto_9.png)
 
 </div>
-
----
-
-# Linguaggio Ladder
-
-- Il linguaggio Ladder è stato il primo linguaggio disponibile per programma i PLC. Si basa su simboli di provenienza "elettrica": binari di potenza (power rail), contatti elettrici (contact) e avvolgimenti magnetici (coil)
-- È costituito in linee verticali dette **rung**. Ciascun rung può contenere **contatti**, **coil**, **Function Block** e **Funzioni**
-- Ciascun **rung** deve essere connesso necessariamente al binario di potenza sinistro (left power rail), mentre il collegamento con quello destro è opzionale
 
 ---
 
@@ -576,3 +579,24 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
 
 ![](images/beckhoff/progetto_12.png)
 
+---
+
+<!-- _class: sectionpage -->
+
+# Task PLC Multipli
+
+---
+
+# Creare un nuovo Task PLC
+
+- Per creare un nuovo task, fare click su System -> Tasks -> Add new item. Selezionare il tipo TwinCAT Task ed assegnare un nome al task (ad esempio PlcTask2)
+- Creare un nuovo Program, facendo click su POUs -> Add POU. Selezionare il tipo Program ed assegnare il nome MAIN2
+- Per associare il Task ed il Program appena creato, fare click sul progetto PLC e poi su **Referenced Task**. Selezionare il Task creato in precedenza.
+- Fare click sul nuovo Task all'interno del progetto e selezionare **Add -> Existing item** e selezionare il Program creato in precedenza.
+
+---
+
+# Aggiungere le variabili alla Watch list
+
+- Fare click con il tasto destro su una variabile e selezionare **Add Watch**
+- Aprire la Watch List facendo click su 
