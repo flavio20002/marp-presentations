@@ -20,7 +20,7 @@ header: "</img>"
 
 Classi 4° e 5°
 
-## Sistemi di automazione Beckhoff
+## Beckhoff: tutorial HMI
 
 <div class="spacer"></div>
 

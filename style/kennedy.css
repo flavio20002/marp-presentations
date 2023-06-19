@@ -254,6 +254,14 @@ section.sectionpage h1 {
   max-width: 900px;
 }
 
+/* ------------------- STRUCTURED TEXT -----------------------------*/
+
+.line {
+  margin-top: 5px;
+  margin-bottom: -30px;
+  border-top: 2px solid black;
+}
+
 /***************** highlightjs **********************/
 
 /*!
