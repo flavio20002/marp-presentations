@@ -3,8 +3,6 @@ marp: true
 theme: kennedy
 math: mathjax
 paginate: true
-backgroundColor: white
-color: black
 header: "</img>"
 ---
 

@@ -7,22 +7,24 @@ transition: fade
 header: "</img>"
 ---
 
-<!-- _class: titlepage -->
+<!-- _class: titlepage titlepagev2 -->
 
-![bg opacity:.3](images/beckhoff/beckhoff.jpg)
+![bg opacity:.3](images/kennedy.jpg)
 
 <div class="shape"></div>
 <div class="spacer"></div>
 
-# SISTEMI AUTOMATICI
-
-Classi 4° e 5°
-
-## Sistemi di automazione Beckhoff: tutorial HMI
+# ANNO DI  </br> FORMAZIONE E PROVA
 
 <div class="spacer"></div>
 
-Prof. Flavio Barisi - Anno scolastico 2022/23
+### Docente neoassunto: Flavio Barisi
+
+###  Docente tutor: Pietro Piol
+
+<div class="spacer"></div>
+
+Anno scolastico 2022/23
 
 ---
 
@@ -32,21 +34,52 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 
 - [Introduzione](#introduzione)
 - [Descrizione Hardware](#descrizione-hardware)
-
+- [Lo standard IEC 61131](#lo-standard-iec-61131)
+- [Installazione di TwinCAT](#installazione-di-twincat)
 
 ---
 
 <!-- _class: sectionpage -->
 
-# Introduzione
+# Riepilogo dell'anno di prova
 
 ---
 
-# Beckhoff
+# Ore e attività extracurricolari
 
-- La multinazionale Beckhoff realizza sistemi di automazione con tecnologia di controllo basata su PC. 
-- La gamma di prodotti copre i principali settori dell'industria come PC industriali, componenti per bus di campo e I/O, Motion Control e software di automazione.
-- Un elemento chiave della tecnologia di controllo PC-based di Beckhoff è il software di automazione TwinCAT (che sta per “The Windows Control and Automation Technology”), in grado di trasformare quasi qualsiasi sistema basato su PC in un sistema di controllo real-time, con un tempo di ciclo fino a 100 microsecondi. 
+- Anno di prova iniziato il 1/9/2022
+- 764 ore di lezione
+  - 22 ore settimanali
+  - 6 classi
+- 6,5 ore di scuola aperta e laboratori
+- 12 ore laboratori formativi
+
+---
+
+# Classi assegnate
+
+- **1L**: 3 ore di cui 2 con ITP, 25 alunni
+- **1L**: 3 ore di cui 2 con ITP, 25 alunni
+- **1L**: 3 ore di cui 2 con ITP, 25 alunni
+- **3AET**: 4 ore di cui 2 con ITP, 25 alunni
+  - Tutor PCTO
+- **3CET**: 4 ore di cui 2 con ITP, 25 alunni
+- **4CET**: 5 ore di cui 3 con ITP, 25 alunni
+  - Segretario del consiglio di classe
+
+---
+
+# Considerazioni sulle classi
+
+- Le classi si presentavano fortemente disomogenee dal punto di vista delle competenze degli alunni e del background sociale, economico e culturale
+- Alcuni alunni sembravano scarsamente motivati rendendo difficoltosa la gestione della classe
+- Il rapporto con gli altri docenti, in particolare con quelli di sostegno si è sempre rivelato proficuo
+
+---
+
+<!-- _class: sectionpage -->
+
+# Competenze
 
 ---
 
@@ -577,46 +610,3 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
 
 ![](images/beckhoff/progetto_12.png)
 
----
-
-<!-- _class: sectionpage -->
-
-# Task PLC Multipli
-
----
-
-# Creare il progetto
-
-- Creare un nuovo progetto TwinCAT e creare un nuovo progetto PLC all'interno
-- Aprire il Program MAIN ed inserire all'interno il seguente codice:
-
-```iecst
-PROGRAM MAIN
-VAR
-  test  :  DINT;
-END_VAR
-```
-<div class="line" style="width:300px"></div>
-
-```iecst
-test:=test+1;
-```
-
----
-
-# Creare un nuovo Task PLC
-
-- Per creare un nuovo task, fare click su System -> Tasks -> Add new item. Selezionare il tipo TwinCAT Task ed assegnare un nome al task (ad esempio PlcTask2). Modificare il Cycle Time in 5 ms
-- Creare un nuovo Program, facendo click su POUs -> Add POU. Selezionare il tipo Program ed assegnare il nome MAIN2
-- Per associare il Task ed il Program appena creato, fare click sul progetto PLC e poi su **Referenced Task**. Selezionare il Task creato in precedenza.
-- Fare click sul nuovo Task all'interno del progetto e selezionare **Add -> Existing item** e selezionare il Program creato in precedenza.
-
----
-
-# Esecuzione e Watch list
-
-- Copiare il codice dal Program MAIN a quello MAIN2, chiamando la variabile **test2**
-- Attivare la configurazione, eseguire il Login
-- Fare click con il tasto destro sulla variabile **test** e selezionare **Add Watch**. Ripetere l'operazione per il programma MAIN2 per la variabile **test2**
-- Aprire la Watch List facendo click su PLC -> Windows  -> Watch 1
-- Avviare l'applicazione e verificare che le variabili cambiano valore con velocità diversa

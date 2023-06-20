@@ -15,9 +15,10 @@
 /***************** COMMON STRUCTURE **********************/
 
 section {
-  --color-foreground: #FFFFFF;
-  --color-highlight: #FA0000;
-  --red-color: #FA0000;
+  --color-background: #FFFFFF;
+  --color-foreground: #000000;
+  --color-highlight: #E30512;
+  --red-color: #E30512;
   padding-top: 120px;
   padding-bottom: 50px;
   padding-left: 120px;
@@ -26,7 +27,7 @@ section {
   flex-flow: column nowrap;
   justify-content: center;
   font-size: 33px;
-  font-family: Lato, 'Avenir Next', Avenir, 'Trebuchet MS', 'Segoe UI', sans-serif;
+  font-family: Lato, sans-serif;
 }
 
 header {
@@ -41,6 +42,10 @@ header {
 header img {
   height: 50px;
   content: url("images/logo_small.png");
+}
+
+section::after {
+  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
 }
 
 section:before {
@@ -61,7 +66,11 @@ section:before {
 }
 
 code {
-  color: black;
+  color: var(--color-foreground);
+}
+
+pre {
+  background: var(--color-background);
 }
 
 .columns {
@@ -212,9 +221,18 @@ section.titlepage .shape {
   margin-bottom: -50px;
 }
 
+section.titlepagev2 .shape {
+  clip-path: polygon(100% 0%, 65% 0%, 90% 100%, 100% 100%);
+}
+
 section.titlepage h1 {
   max-width: 650px;
   font-size: 2.3rem;
+}
+
+section.titlepagev2 h1 {
+  max-width: 780px;
+  font-size: 2rem;
 }
 
 section.titlepage h2 {
