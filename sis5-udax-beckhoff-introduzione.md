@@ -219,16 +219,16 @@ TwinCAT è diviso in due moduli:
 
 | | |
 | --------------- | -------------------------------------- |
-| **BOOL**            | Tipo booleano (vero o falso)           |
-| **BYTE**            | Tipo di dato intero a 8 bit            |
-| **WORD**            | Tipo di dato intero a 16 bit           |
-| **DWORD**           | Tipo di dato intero a 32 bit           |
-| **LWORD**           | Tipo di dato intero a 64 bit           |
-| **SINT**            | Tipo di dato intero con segno a 8 bit  |
-| **INT**             | Tipo di dato intero con segno a 16 bit |
-| **DINT**            | Tipo di dato intero con segno a 32 bit |
-| **LINT**            | Tipo di dato intero con segno a 64 bit |
-| **USINT**           | Tipo di dato intero senza segno a 8 bit |
+| **BOOL**            | Tipo booleano (1 bit, vero o falso)           |
+| **BYTE**            | Tipo di dato intero a 8 bit [0..255]    |
+| **WORD**            | Tipo di dato intero a 16 bit [0..65535]          |
+| **DWORD**           | Tipo di dato intero a 32 bit [0..4294967295]          |
+| **LWORD**           | Tipo di dato intero a 64 bit [0..2<sup>64</sup>-1]          |           |
+| **SINT**            | Tipo di dato intero con segno a 8 bit [-128..127] |
+| **INT**             | Tipo di dato intero con segno a 16 bit [-32768..32767] |
+| **DINT**            | Tipo di dato intero con segno a 32 bit [-2147483648..2147483647] |
+| **LINT**            | Tipo di dato intero con segno a 64 bit [-2<sup>63</sup>..2<sup>63</sup>-1]|
+| **USINT**           | Tipo di dato intero senza segno a 8 bit [0..255] |
 
 ---
 
@@ -238,9 +238,9 @@ TwinCAT è diviso in due moduli:
 
 | | |
 | --------------- | -------------------------------------- |
-| **UINT**            | Tipo di dato intero senza segno a 16 bit |
-| **UDINT**           | Tipo di dato intero senza segno a 32 bit |
-| **ULINT**           | Tipo di dato intero senza segno a 64 bit |
+| **UINT**            | Tipo di dato intero senza segno a 16 bit [0..65535] |
+| **UDINT**           | Tipo di dato intero senza segno a 32 bit [0..4294967295] |
+| **ULINT**           | Tipo di dato intero senza segno a 64 bit [0..2<sup>64</sup>-1] |
 | **REAL**            | Tipo di dato a virgola mobile a 32 bit |
 | **LREAL**           | Tipo di dato a virgola mobile a 64 bit |
 | **TIME**            | Tipo di dato per rappresentare il tempo |
@@ -387,14 +387,7 @@ END_VAR
 
 <!-- _class: sectionpage -->
 
-# Creazione ed esecuzione di un progetto
-
----
-
-# Descrizione del progetto
-
-
-- In questo primo progetto, programmeremo una macchina che può essere avviata tramite un pulsante di avvio e arrestata tramite un pulsante di arresto. Lo stato di macchina avviata sarà segnalato tramite l'accensione di un indicatore luminoso.
+# Creazione di un progetto
 
 ---
 
@@ -538,6 +531,13 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
   ![](images/beckhoff/realtime_5.png)
 
 </div>
+
+---
+
+# Descrizione del progetto
+
+
+- In questo primo progetto, programmeremo una macchina che può essere avviata tramite un pulsante di avvio e arrestata tramite un pulsante di arresto. Lo stato di macchina avviata sarà segnalato tramite l'accensione di un indicatore luminoso.
 
 ---
 
