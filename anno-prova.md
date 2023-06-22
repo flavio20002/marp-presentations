@@ -50,17 +50,18 @@ Anno scolastico 2022/23
 - Anno di prova iniziato il 1/9/2022
 - 764 ore di lezione
   - 22 ore settimanali
-  - 6 classi
+  - 3 classi disciplina **Tecnologie informatiche**
+  - 3 classi disciplina **Sistemi automatici**
 - 6,5 ore di scuola aperta e laboratori
-- 12 ore laboratori formativi
+- 12 ore laboratori formativi anno di prova
 
 ---
 
 # Classi assegnate
 
+- **1I**: 3 ore di cui 2 con ITP, 25 alunni
 - **1L**: 3 ore di cui 2 con ITP, 25 alunni
-- **1L**: 3 ore di cui 2 con ITP, 25 alunni
-- **1L**: 3 ore di cui 2 con ITP, 25 alunni
+- **1M**: 3 ore di cui 2 con ITP, 25 alunni
 - **3AET**: 4 ore di cui 2 con ITP, 25 alunni
   - Tutor PCTO
 - **3CET**: 4 ore di cui 2 con ITP, 25 alunni
@@ -71,7 +72,7 @@ Anno scolastico 2022/23
 
 # Considerazioni sulle classi
 
-- Le classi si presentavano fortemente disomogenee dal punto di vista delle competenze degli alunni e del background sociale, economico e culturale
+- Le classi si presentavano disomogenee dal punto di vista delle competenze degli alunni e del background sociale, economico e culturale
 - Alcuni alunni sembravano scarsamente motivati rendendo difficoltosa la gestione della classe
 - Il rapporto con gli altri docenti, in particolare con quelli di sostegno si è sempre rivelato proficuo
 
