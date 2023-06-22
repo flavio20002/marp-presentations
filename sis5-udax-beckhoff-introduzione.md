@@ -185,15 +185,107 @@ TwinCAT è diviso in due moduli:
 
 ---
 
+# Lo standard IEC 61131
+
+- Lo standard IEC 61131 è uno standard internazionale per la programmazione dei controllori logici programmabili (PLC).
+- La sezione 3 dello standard IEC 61131 definisce cinque linguaggi di programmazione comuni utilizzati nell'automazione industriale. Questi linguaggi offrono un'ampia gamma di funzionalità per soddisfare le esigenze di programmazione dei PLC.
+- La scelta del linguaggio IEC 61131 dipende dalle esigenze specifiche dell'applicazione in quanto ogni linguaggio ha vantaggi e limitazioni. È possibile utilizzare più linguaggi all'interno di uno stesso progetto per sfruttare al meglio le loro caratteristiche.
+
+---
+
 <!-- _class: small -->
 
-# Linguaggi di programmazione
+# I cinque linguaggi IEC 61131-3
 
 1. **Ladder Diagram (LD)**: Basato su diagrammi a contatti e bobine, simula il funzionamento di un circuito elettrico. Utilizzato principalmente per controlli sequenziali.
 2. **Structured Text (ST)** Linguaggio di programmazione di alto livello simile al Pascal o al C. Consente l'implementazione di algoritmi complessi.
 3. **Function Block Diagram (FBD)** Basato sulla rappresentazione grafica di blocchi funzionali interconnessi. Utilizzato per la programmazione di controlli logici complessi.
 4. **Instruction List (IL)** Linguaggio di basso livello simile all'Assembly Utilizzato per programmi semplici e ottimizzati.
 5. **Sequential Function Chart (SFC)** Linguaggio basato su grafici di stato e diagrammi di flusso. Utilizzato per il controllo di macchine e processi complessi.
+---
+
+# Variabili
+
+- Le variabili sono elementi fondamentali nella programmazione PLC. Sono dei contenitori dove i dati vengono memorizzati e manipolati all'interno di un programma.
+- Le variabili possono essere utilizzate per conservare valori temporanei, risultati intermedi o dati di input/output.
+- Nel contesto dello standard IEC 61131, esistono numerosi Data Type disponibili per le variabili. I Data Type definiscono il tipo di dato che una variabile può contenere e le operazioni che possono essere eseguite su di essa.
+
+---
+
+
+<!-- _class: small -->
+
+# Data Type dello standard IEC 61131
+
+| | |
+| --------------- | -------------------------------------- |
+| **BOOL**            | Tipo booleano (vero o falso)           |
+| **BYTE**            | Tipo di dato intero a 8 bit            |
+| **WORD**            | Tipo di dato intero a 16 bit           |
+| **DWORD**           | Tipo di dato intero a 32 bit           |
+| **LWORD**           | Tipo di dato intero a 64 bit           |
+| **SINT**            | Tipo di dato intero con segno a 8 bit  |
+| **INT**             | Tipo di dato intero con segno a 16 bit |
+| **DINT**            | Tipo di dato intero con segno a 32 bit |
+| **LINT**            | Tipo di dato intero con segno a 64 bit |
+| **USINT**           | Tipo di dato intero senza segno a 8 bit |
+
+---
+
+<!-- _class: small -->
+
+# Data Type dello standard IEC 61131
+
+| | |
+| --------------- | -------------------------------------- |
+| **UINT**            | Tipo di dato intero senza segno a 16 bit |
+| **UDINT**           | Tipo di dato intero senza segno a 32 bit |
+| **ULINT**           | Tipo di dato intero senza segno a 64 bit |
+| **REAL**            | Tipo di dato a virgola mobile a 32 bit |
+| **LREAL**           | Tipo di dato a virgola mobile a 64 bit |
+| **TIME**            | Tipo di dato per rappresentare il tempo |
+| **DATE**            | Tipo di dato per rappresentare la data |
+| **TIME_OF_DAY**     | Tipo di dato per rappresentare l'ora del giorno |
+| **DATE_AND_TIME**   | Tipo di dato per rappresentare data e ora |
+| **STRING**          | Tipo di dato per rappresentare una stringa |
+| **WSTRING**         | Tipo di dato per rappresentare una stringa UNICODE |
+
+---
+
+# Etichette
+
+- Nella programmazione PLC, le **label** o etichette sono nomi simbolici associati alle variabili. Servono a identificare in modo univoco le variabili all'interno del programma.
+- Le label migliorano la leggibilità e la comprensibilità del codice, consentendo di assegnare nomi significativi alle variabili. Di seguito alcuni esempi:
+  - **Temperature**
+  - **MotorSpeed**
+  - **ValveStatus**
+  - **PressureSetpoint**
+---
+
+# Dichiarazione delle variabili
+
+- Nello standard IEC 61131, le variabili vanno dichiarate prima di essere utilizzate nel programma PLC. La dichiarazione delle variabili include la specifica del nome, del tipo di dato e delle proprietà (se necessario).
+
+- La sintassi generale per dichiarare una variabile è:
+
+  ```iecst
+  VAR
+      <nome>: <tipo di dato>;
+  END_VAR
+  ```
+---
+
+# Esempio di dichiarazione
+
+```iecst
+VAR
+    Temperature: REAL; // Variabile per la temperatura
+    MotorSpeed: INT; // Variabile per la velocità del motore
+    ValveStatus: BOOL; // Variabile per lo stato della valvola
+    Counter: DINT := 0; // Variabile per un contatore inizializzata a 0
+    SensorData: ARRAY [0..9] OF WORD; // Variabile array per i dati del sensore
+END_VAR
+```
 ---
 
 # Linguaggio Ladder

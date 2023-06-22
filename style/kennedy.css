@@ -19,7 +19,7 @@ section {
   --color-foreground: #000000;
   --color-highlight: #E30512;
   --red-color: #E30512;
-  padding-top: 120px;
+  padding-top: 130px;
   padding-bottom: 50px;
   padding-left: 120px;
   padding-right: 70px;
@@ -57,7 +57,7 @@ section:before {
   position: absolute;
   z-index: 0;
   margin-left: -120px;
-  margin-top: -120px !important;
+  margin-top: -130px !important;
   margin-bottom: -50px;
 }
 
@@ -187,12 +187,22 @@ blockquote::before {
   content: none;
 }
 
+thead th:empty {
+  display: none;
+}
+
 
 /* ------------------- SMALL -----------------------------*/
 
 section.small li,
-section.small p {
+section.small p,
+section.small table {
   font-size: 0.8rem;
+}
+
+section.small table th,
+section.small table td {
+  padding: 0.15em 0.4em;
 }
 
 /* ------------------- SUMMARYPAGE -----------------------------*/
