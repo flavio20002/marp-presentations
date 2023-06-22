@@ -159,11 +159,16 @@ section>p>a>img {
 
 section>p>img,
 section>p>a>img {
-  width: 1000px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .columns img {
   width: 100%;
+}
+
+p:has(> img) {
+  margin: 0;
 }
 
 table thead th {
