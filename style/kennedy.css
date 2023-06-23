@@ -27,7 +27,11 @@ section {
   flex-flow: column nowrap;
   justify-content: center;
   font-size: 33px;
+  line-height: 1.35;
+  letter-spacing: 1.25px;
   font-family: Lato, sans-serif;
+  width: 1280px;
+  height: 720px;
 }
 
 header {
