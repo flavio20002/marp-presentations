@@ -9,7 +9,7 @@ header: "</img>"
 
 <!-- _class: titlepage -->
 
-![bg opacity:.3](images/beckhoff/beckhoff.jpg)
+![bg](images/beckhoff/beckhoff_sfondo.jpg)
 
 <div class="shape"></div>
 <div class="spacer"></div>
@@ -208,7 +208,7 @@ TwinCAT è diviso in due moduli:
 
 - Le variabili sono elementi fondamentali nella programmazione PLC. Sono dei contenitori dove i dati vengono memorizzati e manipolati all'interno di un programma.
 - Le variabili possono essere utilizzate per conservare valori temporanei, risultati intermedi o dati di input/output.
-- Nel contesto dello standard IEC 61131, esistono numerosi Data Type disponibili per le variabili. I Data Type definiscono il tipo di dato che una variabile può contenere e le operazioni che possono essere eseguite su di essa.
+- Nel contesto dello standard IEC 61131, esistono numerosi Data Type disponibili per le variabili. I Data Type definiscono il tipo di dato che una variabile può contenere, le operazioni che possono essere eseguite su di essa e la quantità di memoria allocata per ogni variabile.
 
 ---
 
@@ -229,6 +229,7 @@ TwinCAT è diviso in due moduli:
 | **DINT**            | Tipo di dato intero con segno a 32 bit [-2147483648..2147483647] |
 | **LINT**            | Tipo di dato intero con segno a 64 bit [-2<sup>63</sup>..2<sup>63</sup>-1]|
 | **USINT**           | Tipo di dato intero senza segno a 8 bit [0..255] |
+| **UINT**            | Tipo di dato intero senza segno a 16 bit [0..65535] |
 
 ---
 
@@ -238,15 +239,15 @@ TwinCAT è diviso in due moduli:
 
 | | |
 | --------------- | -------------------------------------- |
-| **UINT**            | Tipo di dato intero senza segno a 16 bit [0..65535] |
 | **UDINT**           | Tipo di dato intero senza segno a 32 bit [0..4294967295] |
 | **ULINT**           | Tipo di dato intero senza segno a 64 bit [0..2<sup>64</sup>-1] |
-| **REAL**            | Tipo di dato a virgola mobile a 32 bit |
-| **LREAL**           | Tipo di dato a virgola mobile a 64 bit |
-| **TIME**            | Tipo di dato per rappresentare il tempo |
-| **DATE**            | Tipo di dato per rappresentare la data |
-| **TIME_OF_DAY**     | Tipo di dato per rappresentare l'ora del giorno |
-| **DATE_AND_TIME**   | Tipo di dato per rappresentare data e ora |
+| **REAL**            | Tipo di dato a virgola mobile a 32 bit (≈ 10 <sup>38</sup>) |
+| **LREAL**           | Tipo di dato a virgola mobile a 64 bit (≈ 10 <sup>308</sup>)|
+| **TIME**            | Tipo di dato per rappresentare il tempo a 32 bit |
+| **LTIME**            | Tipo di dato per rappresentare il tempo a 64 bit |
+| **DATE**            | Tipo di dato per rappresentare la data (32 bit) |
+| **TIME_OF_DAY**     | Tipo di dato per rappresentare l'ora del giorno (32 bit) |
+| **DATE_AND_TIME**   | Tipo di dato per rappresentare data e ora (32 bit) |
 | **STRING**          | Tipo di dato per rappresentare una stringa |
 | **WSTRING**         | Tipo di dato per rappresentare una stringa UNICODE |
 
@@ -264,8 +265,7 @@ TwinCAT è diviso in due moduli:
 
 # Dichiarazione delle variabili
 
-- Nello standard IEC 61131, le variabili vanno dichiarate prima di essere utilizzate nel programma PLC. La dichiarazione delle variabili include la specifica del nome, del tipo di dato e delle proprietà (se necessario).
-
+- Nello standard IEC 61131, le variabili vanno dichiarate prima di essere utilizzate nel programma PLC. La dichiarazione delle variabili include la specifica del nome, del tipo di dato, delle proprietà (se necessario) ed il valore iniziale se presente.
 - La sintassi generale per dichiarare una variabile è:
 
   ```iecst
@@ -273,6 +273,42 @@ TwinCAT è diviso in due moduli:
       <nome>: <tipo di dato>;
   END_VAR
   ```
+---
+
+<!-- _class: small -->
+
+# Assegnazione delle variabili
+
+- Variabile booleana
+  - **TRUE**
+  - **FALSE**
+- Variabile numerica
+  - decimale: Es. **14**
+  - binario (è possibile inserire un _): Es. **2#1001_0011**
+  - ottale: Es. **8#67**
+  - esadecimale Es. **16#A**
+- Variabile reale
+  - **7.4**
+  - **1.64e+009**
+---
+
+<!-- _class: small -->
+
+# Assegnazione delle variabili
+
+- Variabile di tipo stringa
+  - **'Questa è una stringa'**
+- Variabile TIME/LTIME
+  - **T#14MS**
+  - **T#1D12H34M15S500MS**
+  - **LTIME#100D2H30M40S500MS600US700NS**
+- Variabile DATE
+  - **D#1972-03-29**
+- Variabile TIME_OF_DAY
+  - **TOD#15:36:30.123**
+  - **TOD#00:00:00**
+- Variabile DATE_AND_TIME
+  - **DT#1972-03-29-00:00:00**
 ---
 
 # Esempio di dichiarazione
@@ -287,6 +323,7 @@ VAR
 END_VAR
 ```
 ---
+
 
 # Linguaggio Ladder
 

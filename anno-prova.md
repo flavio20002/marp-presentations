@@ -9,7 +9,7 @@ header: "</img>"
 
 <!-- _class: titlepage titlepagev2 -->
 
-![bg opacity:.3](images/kennedy.jpg)
+![bg](images/kennedy_sfondo.jpg)
 
 <div class="shape"></div>
 <div class="spacer"></div>

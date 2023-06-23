@@ -8,7 +8,7 @@ header: "</img>"
 
 <!-- _class: titlepage -->
 
-![bg opacity:.3](images/udax-arduino/arduino.webp)
+![bg](images/udax-arduino/arduino_sfondo.jpg)
 
 <div class="shape"></div>
 <div class="spacer"></div>
