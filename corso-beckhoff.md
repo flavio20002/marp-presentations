@@ -123,10 +123,10 @@ Di seguito una serie di concetti più avanzati che verranno introdotti ma non ap
 
 # Programma giornaliero
 
-- **Giorno 1**: Introduzione a Beckhoff e TwinCAT, Concetti di base dell'automazione industriale. Panoramica dell'ambiente di sviluppo TwinCAT e configurazione
+- **Giorno 1**: Introduzione a Beckhoff e TwinCAT, concetti di base dell'automazione industriale. Panoramica dell'ambiente di sviluppo TwinCAT
 
-- **Giorno 2**: Programmazione in linguaggio Ladder e ST. Configurazione dei dispositivi Beckhoff I/O digitali e I/O analogici
+- **Giorno 2**: Programmazione in linguaggio LD e ST. Configurazione dei dispositivi Beckhoff I/O digitali e I/O analogici
 
-- **Giorno 3**: Interazione con il motore passo passo. Creazione di un progetto in linguaggio Ladder per la marcia e arresto del motore
+- **Giorno 3**: Interazione con il motore passo passo. Creazione di un progetto in linguaggio LD e ST per la marcia e arresto del motore
 
-- **Giorno 4**: Ulteriori sercitazioni pratiche. Introduzione ai concetti avanzati. Domande, discussione e conclusioni
+- **Giorno 4**: Ulteriori esercitazioni pratiche. Introduzione ai concetti avanzati. Domande, discussione e conclusioni
