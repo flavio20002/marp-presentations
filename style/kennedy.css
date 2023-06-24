@@ -168,12 +168,12 @@ section>p>a>img {
   object-fit: cover;
 }
 
-img[src*='#auto'] {
-  width: auto;
-}
-
 .columns img {
   width: 100%;
+}
+
+img[src*='#auto'] {
+  width: auto;
 }
 
 p:has(> img) {
@@ -316,7 +316,7 @@ section.sectionpage h1 {
 /* ------------------- STRUCTURED TEXT -----------------------------*/
 
 .line {
-  margin-top: 5px;
-  margin-bottom: -30px;
-  border-top: 2px solid black;
+  margin-top: 25px;
+  margin-bottom: -5px;
+  border-top: 3px solid lightgrey;
 }

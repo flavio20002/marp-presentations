@@ -325,6 +325,14 @@ END_VAR
 
 ---
 
+# Struttura a due sezioni dell'editor
+
+- L'interfaccia di editing del codice in un ambiente di sviluppo per sistemi di automazione industriale è generalmente divisa in due sezioni. La sezione di **dichiarazione** e quella di **implementazione**.
+- Questa divisione in due sezioni separate offre una chiara distinzione tra la gestione delle variabili e la scrittura del codice, migliorando l'organizzazione e la comprensione del progetto.
+- Nell'atto di creazione di una **POU**, l'utente può scegliere il linguaggio di implementazione tra uno dei 5 linguaggi definiti dallo standard IEC 61131
+
+---
+
 
 # Linguaggio Ladder
 
@@ -335,6 +343,44 @@ END_VAR
 ---
 
 # Linguaggio ST
+
+
+
+
+---
+
+# Linguaggio ST: IF ELSE
+
+<div class="columns">
+  <div>
+
+  ![](images/beckhoff/if.svg#auto)
+
+  </div>
+  <div>
+
+  ![](images/beckhoff/if-else.svg#auto)
+  </div>
+</div>
+
+---
+
+# Linguaggio ST: IF ELSE
+
+```iecst
+PROGRAM MAIN
+VAR
+  Condition   : BOOL;
+  Message     : STRING  := '';
+END_VAR
+```
+<div class="line" style="width:100%"></div>
+
+```iecst
+IF condition THEN
+  Message := 'The condition is true';
+END_IF
+```
 
 ---
 

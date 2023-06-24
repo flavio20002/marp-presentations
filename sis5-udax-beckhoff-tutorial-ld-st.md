@@ -50,13 +50,13 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 ```iecst
 PROGRAM MAIN
 VAR
-  test  :  DINT;
+  Test  :  DINT;
 END_VAR
 ```
-<div class="line" style="width:300px"></div>
+<div class="line" style="width:100%"></div>
 
 ```iecst
-test:=test+1;
+Test:=Test+1;
 ```
 
 ---
