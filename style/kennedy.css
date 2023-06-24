@@ -168,6 +168,10 @@ section>p>a>img {
   object-fit: cover;
 }
 
+img[src*='#auto'] {
+  width: auto;
+}
+
 .columns img {
   width: 100%;
 }

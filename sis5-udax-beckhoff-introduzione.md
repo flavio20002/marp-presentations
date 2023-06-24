@@ -275,6 +275,19 @@ TwinCAT è diviso in due moduli:
   ```
 ---
 
+# Esempio di dichiarazione
+
+```iecst
+VAR
+    Temperature: REAL; // Variabile per la temperatura
+    MotorSpeed: INT; // Variabile per la velocità del motore
+    ValveStatus: BOOL; // Variabile per lo stato della valvola
+    Counter: DINT := 0; // Variabile per un contatore inizializzata a 0
+    SensorData: ARRAY [0..9] OF WORD; // Variabile array per i dati del sensore
+END_VAR
+```
+---
+
 <!-- _class: small -->
 
 # Assegnazione delle variabili
@@ -309,19 +322,7 @@ TwinCAT è diviso in due moduli:
   - **TOD#00:00:00**
 - Variabile DATE_AND_TIME
   - **DT#1972-03-29-00:00:00**
----
 
-# Esempio di dichiarazione
-
-```iecst
-VAR
-    Temperature: REAL; // Variabile per la temperatura
-    MotorSpeed: INT; // Variabile per la velocità del motore
-    ValveStatus: BOOL; // Variabile per lo stato della valvola
-    Counter: DINT := 0; // Variabile per un contatore inizializzata a 0
-    SensorData: ARRAY [0..9] OF WORD; // Variabile array per i dati del sensore
-END_VAR
-```
 ---
 
 
@@ -330,6 +331,26 @@ END_VAR
 - Il linguaggio Ladder è stato il primo linguaggio disponibile per programma i PLC. Si basa su simboli di provenienza "elettrica": binari di potenza (power rail), contatti elettrici (contact) e avvolgimenti magnetici (coil)
 - È costituito in linee verticali dette **rung**. Ciascun rung può contenere **contatti**, **coil**, **Function Block** e **Funzioni**
 - Ciascun **rung** deve essere connesso necessariamente al binario di potenza sinistro (left power rail), mentre il collegamento con quello destro è opzionale
+
+---
+
+# Linguaggio ST
+
+---
+
+# Linguaggio ST: Commenti
+
+
+- Un commento è una porzione di testo nel codice sorgente che viene ignorata dal compilatore o dall'interprete e vengono utilizzati per documentare il codice e facilitarne la manutenzione.
+- I commenti su una sola riga iniziano con il carattere "//" mentre quelli su più righe sono delimitati dai caratteri "/*" all'inizio e "*/" alla fine.
+
+```iecst
+x:=5; // this is a single line comment
+/* 
+Multiline comment
+*/
+
+```
 
 ---
 
@@ -716,3 +737,26 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
 
 ![](images/beckhoff/progetto_12.png)
 
+---
+
+# Auto Declare e Input Assistance
+
+- L'Auto Declare è una funzionalità di TwinCAT che semplifica la dichiarazione delle variabili
+- L'Input Assistant fornisce informazioni dettagliate sulle istruzioni, inclusi i parametri richiesti, i tipi di dati supportati e una descrizione delle funzionalità. Questa documentazione aiuta gli sviluppatori a comprendere meglio l'utilizzo corretto delle istruzioni e a evitare errori di sintassi.
+- Entrambe le funzioni sono accessibili facendo click con il tasto destro all'interno di una finestra di codice
+
+---
+
+# Smart Coding
+
+<div class="columns">
+  <div>
+
+- La modalità Smart Coding in TwinCAT è una potente funzionalità che utilizza l'intelligenza artificiale per migliorare l'efficienza, la precisione e la qualità della scrittura del codice.
+- Per attivare la modalità Smart Coding, fare click su Tools -> Options -> TwinCAT -> PLC Environment -> Smart Coding
+  </div>
+  <div>
+
+  ![](images/beckhoff/smart_coding.png)
+  </div>
+</div>
