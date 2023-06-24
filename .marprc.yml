@@ -1,0 +1,7 @@
+allowLocalFiles: true
+output: "pdf"
+inputDir: "."
+themeSet: "./style"
+pdf: true
+html: true
+engine: "./engine/engine.js"

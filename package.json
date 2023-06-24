@@ -1,0 +1,16 @@
+{
+  "name": "marp-presentations",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build-all": "marp",
+    "build-single": "marp --no-config-file --allow-local-files --theme-set ./style --html --pdf --engine ./engine/engine.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^3.0.2",
+    "highlightjs": "^9.16.2",
+    "highlightjs-structured-text": "^1.4.9"
+  }
+}
