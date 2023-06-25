@@ -280,6 +280,17 @@ section.titlepage h2 {
   max-width: 750px;
 }
 
+section.titlepagev2 h2 {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+section.titlepagev2 h2 strong {
+  color: white;
+  font-weight: bold;
+}
+
+
 /* ------------------- SECTIONPAGE -----------------------------*/
 
 section.sectionpage {
