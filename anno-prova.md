@@ -106,7 +106,20 @@ Di seguito sono riportati  gli elementi del Patto per lo Sviluppo Professionale 
 
 <!-- _class: sectionpage -->
 
-# Attività didattica predisposta
+# Attività didattica: Automazione industriale basata su PC Beckhoff
+
+---
+
+# Collocazione nel curricolo
+
+- Classe V Elettronica ed Elettrotecnica
+- L’attività didattica è collocata all’interno di una Unità di Apprendimento chiamata Applicazioni dei PLC
+
+<div class="spacer"></div>
+
+![](images/beckhoff/programmazione-didattica.svg#auto)
+
+<div class="spacer"></div>
 
 ---
 
@@ -152,7 +165,6 @@ Durante il mese di giugno ho seguito corso online offerto da Beckhoff della dura
 - TwinCAT 3 Motion NC PTP Base 
 - TwinCAT 3 Programmazione PLC – Estensioni OOP
 
-
 ---
 
 
@@ -160,7 +172,17 @@ Durante il mese di giugno ho seguito corso online offerto da Beckhoff della dura
 
 ---
 
+# Corso di formazione docenti
 
+Al fine di condividere le mie conoscenze relative ai dispositivi Beckhoff acquisite durante l'anno di prova, verrà tenuto un corso di  formazione per docenti:
+
+
+- Comprendere i concetti fondamentali dell'automazione industriale con dispositivi Beckhoff.
+- Installare, configurare ed utilizzare l'ambiente di sviluppo TwinCAT per creare semplici applicazioni di controllo.
+- Comprendere i concetti di rete e protocolli di comunicazione
+- Familiarizzare con i dispositivi Beckhoff, come I/O digitali, I/O analogici e motori. Configurarli e collegarli ad un sistema di controllo
+
+---
 
 <!-- _class: sectionpage -->
 
@@ -171,22 +193,10 @@ Durante il mese di giugno ho seguito corso online offerto da Beckhoff della dura
 
 # Competenze approfondite
 
-Gestione della classe: Ho lavorato per migliorare la mia capacità di creare un ambiente di
-apprendimento inclusivo, positivo e ben organizzato. Questa competenza è migliorata
-grazie alla partecipazione a workshop e seminari, all'osservazione di colleghi esperti e alla
-sperimentazione di diverse strategie in classe. Uso di strumenti e tecnologie digitali: Ho
-approfondito le mie conoscenze e abilità nell'utilizzo di strumenti digitali per migliorare
-l'insegnamento e l'apprendimento. Grazie all'attività di formazione e alla pratica in classe,
-mi sento più a mio agio nell'integrare le tecnologie nella didattica e nel monitoraggio del
-progresso degli studenti. Approcci pedagogici innovativi: Ho cercato di acquisire una
-maggiore padronanza di metodi didattici innovativi, come il cooperative learning, la flipped
-classroom e la gamification. La partecipazione a corsi di formazione e la condivisione delle
-esperienze con i colleghi mi ha permesso di applicare questi approcci in classe,
-migliorando l'engagement degli studenti e la qualità dell'apprendimento. Competenze
-comunicative e relazionali: Ho lavorato per migliorare le mie capacità di comunicazione e
-le relazioni con gli studenti, i genitori e i colleghi. Attraverso la pratica quotidiana, la
-riflessione sulle mie interazioni e il feedback ricevuto, ho notato miglioramenti nella mia
-capacità di ascoltare, comunicare in modo efficace e costruire relazioni positive.
+- **Gestione della classe**: Ho lavorato per migliorare la mia capacità di creare un ambiente di apprendimento inclusivo e positivo.
+- **Uso di strumenti e tecnologie digitali**: Ho approfondito le mie conoscenze e abilità nell'utilizzo di strumenti digitali per migliorare l'insegnamento e l'apprendimento. 
+- **Metodologie didattiche innovative**: Ho cercato di acquisire una maggiore padronanza di metodi didattici innovativi, come il cooperative learning, la flipped classroom e la gamification. 
+- **Competenze comunicative e relazionali**: Ho lavorato per migliorare le mie capacità di comunicazione e le relazioni con gli studenti, i genitori e i colleghi. 
 
 ---
 

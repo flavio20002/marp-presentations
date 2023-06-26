@@ -9,7 +9,7 @@ header: "</img>"
 
 <!-- _class: titlepage -->
 
-![bg](images/beckhoff/beckhoff_sfondo.jpg)
+![bg](images/beckhoff/beckhoff-sfondo-hd.jpg)
 
 <div class="shape"></div>
 <div class="spacer"></div>

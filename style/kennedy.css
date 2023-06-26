@@ -33,6 +33,8 @@ section {
   font-family: Lato, sans-serif;
   width: 1280px;
   height: 720px;
+  background-color: var(--color-background);
+  background-image: none;
 }
 
 header {
