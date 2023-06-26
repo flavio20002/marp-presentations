@@ -19,6 +19,8 @@ header: "</img>"
 <div class="spacer"></div>
 
 ## Docente neoassunto: **Flavio Barisi**
+## Docente tutor: **Pietro Piol**
+
 
 ---
 
@@ -42,7 +44,6 @@ header: "</img>"
 # Attività didattica
 
 - Anno di prova iniziato il 1/9/2022
-  - Tutor: prof. Pietro Piol
 - 764 ore di lezione
   - 22 ore settimanali
   - 3 classi disciplina **Tecnologie informatiche**
@@ -65,8 +66,6 @@ header: "</img>"
 
 ---
 
----
-
 <!-- _class: sectionpage -->
 
 # Bilancio iniziale delle competenze
@@ -76,7 +75,7 @@ header: "</img>"
 
 # Punti di forza
 
-- Utilizzare efficacemente le tecnologie digitali per migliorare la propria professionalità
+- Padronanza della disciplina
 
 - Progettare attività per la verifica delle competenze trasversali (soft skills)
 
@@ -86,7 +85,7 @@ header: "</img>"
 
 # Punti di debolezza
 
-- Padronanza della disciplina
+- Utilizzare efficacemente le tecnologie digitali per migliorare la propria professionalità
 
 - Rendere gli studenti consapevoli dei loro progressi rispetto agli obiettivi di apprendimento
 
@@ -98,7 +97,7 @@ header: "</img>"
 
 Di seguito sono riportati  gli elementi del Patto per lo Sviluppo Professionale che ho adottato per affrontare e superare i punti di debolezza identificati:
 
-- Conoscere gli elementi epistemologici della e discipline e strutturare le conoscenze  intorno ai principi fondanti delle discipline
+- Conoscere gli elementi epistemologici delle discipline e strutturare le conoscenze  intorno ai principi fondanti delle discipline
 - Essere capace di sviluppare collegamenti interdisciplinari
 - Stabilire una proficua relazione con i propri allievi favorendo un clima di classe positivo
 - Istituire rapporti efficaci e corretti con le famiglie
@@ -170,3 +169,25 @@ Durante il mese di giugno ho seguito corso online offerto da Beckhoff della dura
 ---
 
 
+# Competenze approfondite
+
+Gestione della classe: Ho lavorato per migliorare la mia capacità di creare un ambiente di
+apprendimento inclusivo, positivo e ben organizzato. Questa competenza è migliorata
+grazie alla partecipazione a workshop e seminari, all'osservazione di colleghi esperti e alla
+sperimentazione di diverse strategie in classe. Uso di strumenti e tecnologie digitali: Ho
+approfondito le mie conoscenze e abilità nell'utilizzo di strumenti digitali per migliorare
+l'insegnamento e l'apprendimento. Grazie all'attività di formazione e alla pratica in classe,
+mi sento più a mio agio nell'integrare le tecnologie nella didattica e nel monitoraggio del
+progresso degli studenti. Approcci pedagogici innovativi: Ho cercato di acquisire una
+maggiore padronanza di metodi didattici innovativi, come il cooperative learning, la flipped
+classroom e la gamification. La partecipazione a corsi di formazione e la condivisione delle
+esperienze con i colleghi mi ha permesso di applicare questi approcci in classe,
+migliorando l'engagement degli studenti e la qualità dell'apprendimento. Competenze
+comunicative e relazionali: Ho lavorato per migliorare le mie capacità di comunicazione e
+le relazioni con gli studenti, i genitori e i colleghi. Attraverso la pratica quotidiana, la
+riflessione sulle mie interazioni e il feedback ricevuto, ho notato miglioramenti nella mia
+capacità di ascoltare, comunicare in modo efficace e costruire relazioni positive.
+
+---
+
+<!-- _class: thankspage -->
