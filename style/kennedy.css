@@ -171,6 +171,14 @@ section>p>a>img {
   margin: auto;
 }
 
+section>ul>li>p>img {
+  display: block;
+  margin: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-right: 3.5%;
+}
+
 section>p>img,
 section>p>a>img {
   width: 100%;
