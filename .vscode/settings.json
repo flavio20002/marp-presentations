@@ -1,6 +1,7 @@
 {
   "markdown.marp.themes": [
-    "./style/kennedy.css"
+    "./style/kennedy.css",
+    "./style/kennedy-hd.css"
   ],
   "markdown.marp.enableHtml": true,
   "cSpell.language": "en,it"
