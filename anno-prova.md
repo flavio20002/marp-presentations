@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: kennedy
+theme: kennedy-hd
 math: mathjax
 paginate: true
 transition: fade
@@ -9,7 +9,7 @@ header: "</img>"
 
 <!-- _class: titlepage titlepagev2 -->
 
-![bg](images/kennedy_sfondo.jpg)
+![bg](images/kennedy-sfondo.jpg)
 
 <div class="shape"></div>
 <div class="spacer"></div>
@@ -139,7 +139,7 @@ Su suggerimento dei tecnici Beckhoff, e previo accordo con il prof. Luca D'Amore
 # Quadro didattico ISIS Bassa Friulana
 
 
-![w:900 h:500](images/beckhoff/esempio_quadro_2.jpg)
+![w:1350 h:750](images/beckhoff/esempio_quadro_2.jpg)
 
 ---
 

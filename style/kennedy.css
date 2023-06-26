@@ -50,6 +50,9 @@ header img {
 }
 
 section::after {
+  padding: 3% 2%;
+  height: 10%;
+  line-height: 10%;
   content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
 }
 
@@ -141,13 +144,17 @@ ol>p {
   margin: 0.6em 0 0;
 }
 
+ul {
+  padding-inline-start: 3.5%;
+}
+
 section:not(.titlepage):not(.sectionpage)>h1:first-of-type {
   position: absolute;
   top: 0px;
-  left: 120px;
+  left: 9%;
   z-index: 2;
-  max-width: 1000px;
-  height: 150px;
+  max-width: 80%;
+  height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -288,17 +295,17 @@ section.titlepagev2 .shape {
 }
 
 section.titlepage h1 {
-  max-width: 650px;
+  max-width: 60%;
   font-size: 2.3rem;
 }
 
 section.titlepagev2 h1 {
-  max-width: 780px;
+  max-width: 70%;
   font-size: 2rem;
 }
 
 section.titlepage h2 {
-  max-width: 750px;
+  max-width: 70%;
 }
 
 section.titlepagev2 h2 {
@@ -332,7 +339,7 @@ section.sectionpage:before {
   background-color: white;
   width: 100%;
   height: 100%;
-  clip-path: polygon(calc(100% - 100px) 150px, calc(100% - 150px) 150px, calc(100% - 150px) calc(100% - 150px), calc(100% - 480px) calc(100% - 150px), calc(100% - 480px) calc(100% - 100px), calc(100% - 100px) calc(100% - 100px), calc(100% - 100px) 150px);
+  clip-path: polygon(90% 20%, calc(90% - 50px) 20%, calc(90% - 50px) calc(90% - 50px), calc(90% - 400px) calc(90% - 50px), calc(90% - 400px) 90%, 90% 90%, 90% 20%);
   position: absolute;
   z-index: 0;
   margin-top: 0% !important;
@@ -342,7 +349,7 @@ section.sectionpage:before {
 
 section.sectionpage h1 {
   font-size: 2.2rem;
-  max-width: 900px;
+  max-width: 80%;
 }
 
 /* ------------------- STRUCTURED TEXT -----------------------------*/
