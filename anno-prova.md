@@ -112,14 +112,12 @@ Di seguito sono riportati  gli elementi del Patto per lo Sviluppo Professionale 
 
 # Collocazione nel curricolo
 
-- Classe V Elettronica ed Elettrotecnica
-- L’attività didattica è collocata all’interno di una Unità di Apprendimento chiamata Applicazioni dei PLC
+- Classe V Elettrotecnica ed Elettronica
+- L’attività didattica è collocata all’interno di una Unità di Apprendimento chiamata **Applicazioni dei PLC**
 
-<div class="spacer"></div>
+  ![](images/beckhoff/programmazione-didattica.svg#auto)
 
-![](images/beckhoff/programmazione-didattica.svg#auto)
-
-<div class="spacer"></div>
+- Alcune attività possono essere anticipate nella classe IV, d'accordo con il dipartimento
 
 ---
 

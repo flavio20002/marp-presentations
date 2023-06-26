@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: kennedy
+theme: kennedy-hd
 math: mathjax
 paginate: true
 transition: fade
@@ -9,7 +9,7 @@ header: "</img>"
 
 <!-- _class: titlepage -->
 
-![bg](images/beckhoff/beckhoff_sfondo.jpg)
+![bg](images/beckhoff/beckhoff-sfondo-hd.jpg)
 
 <div class="shape"></div>
 <div class="spacer"></div>
@@ -34,6 +34,7 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 - [Descrizione Hardware](#descrizione-hardware)
 - [Installazione di TwinCAT](#installazione-di-twincat)
 - [Creazione di un progetto](#creazione-di-un-progetto)
+- [Collegamento ad un dispositivo remoto](#collegamento-ad-un-dispositivo-remoto)
 
 ---
 
@@ -533,7 +534,7 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
 - Dato che non è stata acquistata alcuna licenza, verrò richiesto di generare una licenza di trial. Questo messaggio comparirà ogni 7 giorni.
 - Nella finestra, premere il pulsante Sì ed inserire il captcha
 
-![w:400](images/beckhoff/progetto_11.png)
+  ![w:400](images/beckhoff/progetto_11.png)
 
 - Alla richiesta di riavviare il sistema in Run mode, premere Sì
 
@@ -562,3 +563,8 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
 
 ![](images/beckhoff/progetto_12.png)
 
+---
+
+<!-- _class: sectionpage -->
+
+# Collegamento ad un dispositivo remoto

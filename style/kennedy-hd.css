@@ -171,6 +171,14 @@ section>p>a>img {
   margin: auto;
 }
 
+section>ul>li>p>img {
+  display: block;
+  margin: auto;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-right: 3.5%;
+}
+
 section>p>img,
 section>p>a>img {
   width: 100%;
@@ -187,7 +195,7 @@ img[src*='#auto'] {
 }
 
 p:has(> img) {
-  margin: 0;
+  margin: 0px;
 }
 
 table thead th {
