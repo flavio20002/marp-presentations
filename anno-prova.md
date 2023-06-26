@@ -96,7 +96,12 @@ header: "</img>"
 
 # Patto per lo sviluppo professionale
 
-- 
+Di seguito sono riportati  gli elementi del Patto per lo Sviluppo Professionale che ho adottato per affrontare e superare i punti di debolezza identificati:
+
+- Conoscere gli elementi epistemologici della e discipline e strutturare le conoscenze  intorno ai principi fondanti delle discipline
+- Essere capace di sviluppare collegamenti interdisciplinari
+- Stabilire una proficua relazione con i propri allievi favorendo un clima di classe positivo
+- Istituire rapporti efficaci e corretti con le famiglie
 
 ---
 
@@ -105,6 +110,58 @@ header: "</img>"
 # Attività didattica predisposta
 
 ---
+
+# Quadro di automazione
+
+<div class="columns">
+
+- Dispositivi di protezione elettrica
+- Alimentatore
+- PC Industriale CX9020
+- Dispositivi I/O analogici e digitali
+- Motore passo passo AS1010-0000
+  
+![](images/beckhoff/esempio_quadro_3.jpg)
+
+</div>
+
+---
+
+# Visita ISIS Bassa Friulana
+
+Su suggerimento dei tecnici Beckhoff, e previo accordo con il prof. Luca D'Amore ho effettuato una visita presso l'ISIS Bassa Friulana di Cervignano al fine di trarre ispirazione dai materiali didattici preparati:
+
+- Utilizzo di kit per l'automazione Fischertechnik
+- Interfacciamento con braccio robotico Comau
+- Interfacciamento con database ed interfacce utente avanzate
+- Collaborazioni con l'industria
+---
+
+# Quadro didattico ISIS Bassa Friulana
+
+
+![w:900 h:500](images/beckhoff/esempio_quadro_2.jpg)
+
+---
+
+# Corso Beckhoff
+
+Durante il mese di giugno ho seguito corso online offerto da Beckhoff della durata di 16 ore: 
+
+- TwinCAT 3 Formazione Base                                                  
+- TwinCAT 3 Programmazione PLC Base
+- TwinCAT 3 Motion NC PTP Base 
+- TwinCAT 3 Programmazione PLC – Estensioni OOP
+
+
+---
+
+
+# Visita Savio
+
+---
+
+
 
 <!-- _class: sectionpage -->
 
