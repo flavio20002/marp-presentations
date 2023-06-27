@@ -9,7 +9,7 @@ header: "</img>"
 
 <!-- _class: titlepage -->
 
-![bg](images/beckhoff/beckhoff-sfondo-hd.jpg)
+![bg](images/beckhoff/beckhoff_sfondo_hd.jpg)
 
 <div class="shape"></div>
 <div class="spacer"></div>
@@ -67,16 +67,15 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 
 # Sedi Beckhoff
 
-![w:800](images/beckhoff/sedi.jpg)
+![w:1100](images/beckhoff/sedi.jpg)
 
 --- 
 
-<!-- _class: small -->
 
 # TwinCAT 3
 
-- I sistemi operativi Windows  non hanno caratteristiche realtime, ovvero non sono stati progettati per gestire task di controllo. La presenza dello scheduler implica che i vari task siano interrotti durante la loro esecuzione da una serie di altri eventi oppure siano ritardati a causa di interruzioni dovute ad altri task con priorità maggiore.
-- TwinCAT 3 permette di estendere il sistema operativo con una estensione **realtime** integrata all’interno dell’architettura Microsoft e permette di ottenere l’esecuzione di task in maniera deterministica con un jitter (variazione rispetto alla caratteristica attesa) massimo inferiore a 12 μs. Nel resto della presentazione si farà riferimento a TwinCAT 3 con il nome **TwinCAT**.
+- I sistemi operativi Windows  non hanno caratteristiche realtime, ovvero non sono stati progettati per gestire task di controllo. I vari task possono essere interrotti durante la loro esecuzione da una serie di altri eventi oppure essere  ritardati a causa di interruzioni dovute ad altri task con priorità maggiore.
+- TwinCAT 3 contiene un'estensione a livello del kernel di Windows che permette di operare in modo deterministico ed in **realtime** con un jitter (variazione rispetto alla caratteristica attesa) massimo inferiore a 12 μs. Nel resto della presentazione si farà riferimento a TwinCAT 3 con il nome **TwinCAT**.
 
 ---
 
@@ -92,7 +91,7 @@ TwinCAT è diviso in due moduli:
 
 # Struttura di TwinCAT
 
-![w:700](images/beckhoff/twincat.jpg)
+![w:1100](images/beckhoff/twincat.jpg)
 
 ---
 
@@ -108,7 +107,7 @@ TwinCAT è diviso in due moduli:
 
 # Ethercat
 
-![w:900](images/beckhoff/ethercat.jpg)
+![w:1300](images/beckhoff/ethercat.jpg)
 
 ---
 
@@ -122,61 +121,7 @@ TwinCAT è diviso in due moduli:
 
 # ADS
 
-![w:700](images/beckhoff/ads.png)
-
----
-
-<!-- _class: sectionpage -->
-
-# Descrizione hardware
-
----
-
-# CX9020 | Basic CPU module
-
-![](images/beckhoff/cx9020.png)
-
----
-
-<!-- _class: small -->
-
-# EL1008 | 8-channel digital input
-
-<div class="columns">
-  <div>
-
-  - EL1008 è un terminale EtherCAT a 8 canali che acquisisce segnali di controllo binario a 24 V dal livello di processo.
-  - Caratteristiche elettriche:
-    - 24 V DC (-15 %/+20 %)
-    - "0" signal voltage	-3…+5 V
-    - "1" signal voltage	11…30 V
-    - Corrente di input 3 mA
-  </div>
-  <div>
-
-  ![](images/beckhoff/el1008.png)
-  </div>
-</div>
-
----
-
-<!-- _class: small -->
-
-# EL2008 | 8-channel digital output
-
-<div class="columns">
-  <div>
-
-  - EL2008 è un terminale EtherCAT a 8 canali che connette i segnali binari di permette di connettere segnali di controllo a 24 V DC con gli attuatori.
-  - Caratteristiche elettriche:
-    - 24 V DC (-15 %/+20 %)
-    - Corrente massima di output 500 mA
-  </div>
-  <div>
-
-  ![](images/beckhoff/el2008.png)
-  </div>
-</div>
+![w:1100](images/beckhoff/ads.png)
 
 ---
 
@@ -196,15 +141,41 @@ TwinCAT è diviso in due moduli:
 
 ---
 
-# Installazione
+# Tipi di installazione
+
+- **Installazione standard**: viene installata la Shell XAE basata su Visual Studio 2017 e comprende tutte le funzioni di base:
+  - gestire la logica nei linguaggi di programmazione IEC 61131-3 inclusa l'estensione Object Oriented
+  - gestire il moduli di sicurezza, motion control, reti
+  - utilizzare moduli esistenti esistenti C/C++ e Matlab Simulink 
+
+- **Installazione ingrata**: TwinCAT viene integrato all'interno di una installazione di Visual Studio preesistente. Permette di scrivere moduli in linguaggio C++, Matlab Simulink, e applicazioni non realtime in C#/.NET
+
+---
+
+# Installazione Integrata
+
+- Il primo passo dell'installazione integrata è l'installazione di Visual Studio 2019. La versione ufficialmente supportata è la Professional,ma è possibile usare anche la versione Community con alcune limitazioni.
+- Visitare il sito https://visualstudio.microsoft.com/it/vs/older-downloads/ e scaricare Visual Studio 2019 Community Edition. 
+Effettuare un doppio click sul file e seguire le istruzioni a video. Selezionare i carichi di lavoro per applicazioni Desktop C++ e C#/.NET
+---
+
+
+# Installazione Visual Studio 2019
+
+ ![w:1400](images/beckhoff/installazione_visual_studio.png)
+
+---
+
+# Installazione TwinCAT 3
 
 - Visitare il sito https://www.beckhoff.com/it-it/support/download-finder/software-and-tools/ e registrarsi con un indirizzo email valido
 - Scaricare il file eseguibile chiamato eXtended Automation Engineering (XAE) della dimensione 1,4 GB (il file XAE include anche la parte XAR descritta in precedenza)
 - Effettuare un doppio click sul file e seguire le istruzioni a video. Selezionare le opzioni visualizzate nelle slide seguenti
+- Se si è scelto di seguire la modalità di installazione integrata, selezionare la versione di Visual Studio da estendere. In caso di installazione standard, usare le impostazioni di default
 
 ---
 
-# Installazione
+#  Installazione TwinCAT 3
 
 <div class="columns">
   <div>
@@ -220,7 +191,7 @@ TwinCAT è diviso in due moduli:
 
 ---
 
-# Installazione
+#  Installazione TwinCAT 3
 
 <div class="columns">
   <div>
@@ -271,7 +242,7 @@ TwinCAT è diviso in due moduli:
 
 <!-- _class: sectionpage -->
 
-# Creazione di un progetto
+# Uilizzo di TwinCAT
 
 ---
 
@@ -286,7 +257,7 @@ TwinCAT è diviso in due moduli:
 
 # Creazione di un progetto
 
-![w:700](images/beckhoff/progetto_1.png)
+![w:1100](images/beckhoff/progetto_1.png)
 
 ---
 
@@ -562,6 +533,77 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
 # Modifica delle variabili e debug
 
 ![](images/beckhoff/progetto_12.png)
+
+---
+
+<!-- _class: sectionpage -->
+
+# Descrizione hardware
+
+---
+
+# CX9020 | Basic CPU module
+
+![](images/beckhoff/cx9020.png)
+
+---
+
+# CX9020 | Ethercat
+
+
+<div class="columns">
+  <div>
+
+  - Il PC industriale CX9020 permette la connessione di dispositivi Ethercat tramite i contatti striscianti presenti sul lato destro del dispositivo.
+  - Tali contatti permettono il trasferimento dei dati e dell'alimentazione ai moduli Ethercat aggiuntivi
+  </div>
+  <div>
+
+  ![w:600](images/beckhoff/cx9020_side.png)
+  </div>
+</div>
+
+---
+
+<!-- _class: small -->
+
+# EL1008 | 8-channel digital input
+
+<div class="columns">
+  <div>
+
+  - EL1008 è un terminale EtherCAT a 8 canali che acquisisce segnali di controllo binario a 24 V dal campo.
+  - Caratteristiche elettriche:
+    - 24 V DC (-15 %/+20 %)
+    - "0" signal voltage	-3…+5 V
+    - "1" signal voltage	11…30 V
+    - Corrente di input 3 mA
+  </div>
+  <div>
+
+  ![](images/beckhoff/el1008.png)
+  </div>
+</div>
+
+---
+
+<!-- _class: small -->
+
+# EL2008 | 8-channel digital output
+
+<div class="columns">
+  <div>
+
+  - EL2008 è un terminale EtherCAT a 8 canali che permette di connettere comandare attuatori sul campo tramite segnali di controllo binari a 24 V DC.
+  - Caratteristiche elettriche:
+    - 24 V DC (-15 %/+20 %)
+    - Corrente massima di output 500 mA
+  </div>
+  <div>
+
+  ![](images/beckhoff/el2008.png)
+  </div>
+</div>
 
 ---
 
