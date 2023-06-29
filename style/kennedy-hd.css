@@ -75,6 +75,10 @@ section:before {
   flex-grow: 1;
 }
 
+.gap {
+  margin-top: 0.5em;
+}
+
 code {
   color: var(--color-foreground);
 }
@@ -198,9 +202,16 @@ p:has(> img) {
   margin: 0;
 }
 
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 0;
+}
+
 table thead th {
-  background: white;
-  color: black;
+  background: var(--red-color);
+  color: white;
+  font-weight: normal;
 }
 
 table th,
@@ -236,6 +247,30 @@ section.small table th,
 section.small table td {
   padding: 0.15em 0.4em;
 }
+
+section.small p {
+  margin: 0.5em 0 0;
+}
+
+section.small ul,
+section.small ol {
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+}
+
+/* ------------------- VERYSMALL -----------------------------*/
+
+section.verysmall li,
+section.verysmall p,
+section.verysmall table {
+  font-size: 0.6rem;
+}
+
+section.verysmall table th,
+section.verysmall table td {
+  padding: 0.1em 0.3em;
+}
+
 
 
 /* ------------------- THANKSPAGE -----------------------------*/

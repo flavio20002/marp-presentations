@@ -28,10 +28,10 @@ header: "</img>"
 
 # Sommario
 
-- [Introduzione](#introduzione)
-- [Descrizione Hardware](#descrizione-hardware)
-- [Lo standard IEC 61131](#lo-standard-iec-61131)
-- [Installazione di TwinCAT](#installazione-di-twincat)
+- [Didattica](#didattica)
+- [Bilancio iniziale delle competenze](#bilancio-iniziale-delle-competenze)
+- [Attività didattica](#attivit%C3%A0-didattica-automazione-industriale-basata-su-pc-beckhoff)
+- [Bilancio finale](#bilancio-finale)
 
 ---
 
@@ -49,19 +49,18 @@ header: "</img>"
   - 3 classi disciplina **Tecnologie informatiche**
   - 3 classi disciplina **Sistemi automatici**
 - 6,5 ore di scuola aperta e laboratori
-- 12 ore laboratori formativi anno di prova
 
 ---
 
 # Classi e incarichi aggiuntivi
 
-- **1I**: 3 ore di cui 2 con ITP, 25 alunni
-- **1L**: 3 ore di cui 2 con ITP, 25 alunni
-- **1M**: 3 ore di cui 2 con ITP, 25 alunni
-- **3AET**: 4 ore di cui 2 con ITP, 25 alunni
+- **1I**: 3 ore di cui 2 con ITP, 23 alunni
+- **1L**: 3 ore di cui 2 con ITP, 18 alunni
+- **1M**: 3 ore di cui 2 con ITP, 24 alunni
+- **3AET**: 4 ore di cui 2 con ITP, 21 alunni
   - Tutor PCTO
-- **3CET**: 4 ore di cui 2 con ITP, 25 alunni
-- **4CET**: 5 ore di cui 3 con ITP, 25 alunni
+- **3CET**: 4 ore di cui 2 con ITP, 19 alunni
+- **4CET**: 5 ore di cui 3 con ITP, 17 alunni
   - Segretario del consiglio di classe
 
 ---
@@ -75,7 +74,7 @@ header: "</img>"
 
 # Punti di forza
 
-- Padronanza della disciplina
+- Rispettare regole, ruoli e impegni assunti all’interno del proprio contesto professionale
 
 - Progettare attività per la verifica delle competenze trasversali (soft skills)
 
@@ -84,6 +83,8 @@ header: "</img>"
 ---
 
 # Punti di debolezza
+
+- Padronanza della disciplina
 
 - Utilizzare efficacemente le tecnologie digitali per migliorare la propria professionalità
 
@@ -95,7 +96,7 @@ header: "</img>"
 
 # Patto per lo sviluppo professionale
 
-Di seguito sono riportati  gli elementi del Patto per lo Sviluppo Professionale che ho adottato per affrontare e superare i punti di debolezza identificati:
+Di seguito sono riportati gli elementi del Patto per lo Sviluppo Professionale che sono stati più importanti per affrontare e superare i punti di debolezza identificati:
 
 - Conoscere gli elementi epistemologici delle discipline e strutturare le conoscenze  intorno ai principi fondanti delle discipline
 - Essere capace di sviluppare collegamenti interdisciplinari
@@ -110,14 +111,75 @@ Di seguito sono riportati  gli elementi del Patto per lo Sviluppo Professionale 
 
 ---
 
-# Collocazione nel curricolo
+# Contesto didattico
 
-- Classe V Elettrotecnica ed Elettronica
-- L’attività didattica è collocata all’interno di una Unità di Apprendimento chiamata **Applicazioni dei PLC**
+- Classe IV, V Elettrotecnica ed Elettronica
+- Disciplina **Sistemi Automatici** 
+- L’attività didattica è collocata all’interno di una Unità di Apprendimento chiamata *Applicazioni dei PLC*
 
   ![](images/beckhoff/programmazione-didattica.svg#auto)
 
-- Alcune attività possono essere anticipate nella classe IV, d'accordo con il dipartimento
+---
+
+# Obiettivi specifici di apprendimento
+
+<!-- _class: small -->
+
+**Direttiva Ministeriale n°4 2012**: Adozione delle Linee guida per il passaggio al nuovo ordinamento degli Istituti tecnici
+
+<div class="gap"></div>
+
+<div class="columns">
+
+<div>
+
+  **Conoscenze** (Sapere…)
+  - Architettura dei controllori a logica programmabile.
+  - Programmazione dei controllori a logica programmabile.
+  - Manualistica d’uso e di riferimento.
+  - Lessico e terminologia tecnica del settore anche in lingua inglese.
+
+</div>
+
+<div>
+
+  **Abilità** (Saper fare…)
+  - Programmare e gestire componenti e sistemi programmabili in contesti specifici.
+  - Realizzare semplici programmi relativi all’acquisizione ed elaborazione dati.
+  - Sviluppare programmi applicativi per il monitoraggio e il controllo di sistemi.
+
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: small -->
+
+# Competenze
+
+**Risultati di apprendimento** (D.P.R n°88 2010)
+- Utilizzare linguaggi di programmazione, di diversi livelli, riferiti ad ambiti specifici di applicazione.
+- Analizzare il funzionamento, progettare e implementare sistemi automatici
+
+**Assi culturali** (D.M. n°139 2007)
+- Scientifico tecnologico: osservare, descrivere e analizzare fenomeni appartenenti alla realtà naturale e artificiale e riconoscere nelle sue varie forme i concetti di sistema e complessità
+
+**Competenze chiave di cittadinanza**
+- Progettare
+- Individuare collegamenti e relazioni
+- Collaborare e partecipare
+
+---
+
+# Attività svolte
+
+- Realizzazione prototipo quadro di automazione per attività didattiche
+- Autoformazione tramite tutorial e documentazione Beckhoff
+- Corso di formazione di 16 ore offerto da Beckhoff 
+- Visita ISIS della Bassa Friulana di Cervignano
+- Incontro con tecnici dell'azienda Savio
 
 ---
 
@@ -137,20 +199,15 @@ Di seguito sono riportati  gli elementi del Patto per lo Sviluppo Professionale 
 
 ---
 
-# Visita ISIS Bassa Friulana
+# Autoformazione
 
-Su suggerimento dei tecnici Beckhoff, e previo accordo con il prof. Luca D'Amore ho effettuato una visita presso l'ISIS Bassa Friulana di Cervignano al fine di trarre ispirazione dai materiali didattici preparati:
+Totale impegno di circa 30 ore
 
-- Utilizzo di kit per l'automazione Fischertechnik
-- Interfacciamento con braccio robotico Comau
-- Interfacciamento con database ed interfacce utente avanzate
-- Collaborazioni con l'industria
----
-
-# Quadro didattico ISIS Bassa Friulana
-
-
-![w:1350 h:750](images/beckhoff/esempio_quadro_2.jpg)
+- Corso Beckhoff di Jakob Sagatowski disponibile su Youtube
+- Tutorial Beckhoff di Electrical Automation Hands-On disponibile su Youtube
+- Tutorial di Beckhoff Eslam Shaaban disponibile su Youtube
+- Tutorial https://www.contactandcoil.com/
+- Tutorial Beckhoff
 
 ---
 
@@ -165,8 +222,39 @@ Durante il mese di giugno ho seguito corso online offerto da Beckhoff della dura
 
 ---
 
+# Visita ISIS della Bassa Friulana
+
+Su suggerimento dei tecnici Beckhoff, e previo accordo con il prof. Luca D'Amore ho effettuato una visita presso l'ISIS Bassa Friulana di Cervignano al fine di trarre ispirazione dai materiali didattici preparati:
+
+- Utilizzo di kit per l'automazione Fischertechnik
+- Interfacciamento con braccio robotico Comau
+- Interfacciamento con database ed interfacce utente avanzate
+- Collaborazioni con l'industria
+---
+
+# Quadro didattico ISIS della Bassa Friulana
+
+
+![w:1350 h:750](images/beckhoff/esempio_quadro_2.jpg)
+
+---
+
 
 # Visita Savio
+
+<!-- _class: small -->
+
+<div class="columns">
+
+- Savio è leader mondiale nella progettazione e produzione di macchinari altamente tecnologici e dispositivi di controllo qualità per l'industria tessile.
+- Attualmente utilizza i PC Beckhoff all'interno dell'ufficio di R&D nell'ambito della verifiche meccaniche dei materiali
+- Possibile collaborazione nell'ambito di un progetto multidisciplinare
+
+
+![w:600](images/beckhoff/savio.jpg)
+
+
+</div>
 
 ---
 
@@ -199,3 +287,85 @@ Al fine di condividere le mie conoscenze relative ai dispositivi Beckhoff acquis
 ---
 
 <!-- _class: thankspage -->
+
+
+---
+
+<!-- _class: sectionpage -->
+
+# Backup
+
+---
+
+<!-- _class: verysmall -->
+
+# Griglia di valutazione
+
+<table style="text-align:center">
+    <thead>
+        <tr>
+            <th>Peso</th>
+            <th>Indicatori</th>
+            <th>Livelli</th>
+            <th>Punti</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=3>25%</td>
+            <td rowspan=3>Padronanza delle conoscenze coinvolte nella prova e caratterizzanti l'indirizzo di studi.</td>
+            <td>completa</td>
+            <td>2,5</td>
+        </tr>
+        <tr>
+            <td>parziale</td>
+            <td>1,5</td>
+        </tr>
+        <tr>
+            <td>carenti</td>
+            <td>0,5</td>
+        </tr>
+        <tr>
+            <td rowspan=3>25%</td>
+            <td rowspan=3>Analisi e comprensione dei problemi proposti, scelte effettuate, metodologie e procedimenti utilizzati</td>
+            <td>coerenti e corrette</td>
+            <td>2,5</td>
+        </tr>
+        <tr>
+            <td>parzialmente coerenti e corrette</td>
+            <td>1,5</td>
+        </tr>
+        <tr>
+            <td>carenti</td>
+            <td>0,5</td>
+        </tr>
+        <tr>
+            <td rowspan=3>25%</td>
+            <td rowspan=3>Completezza nello svolgimento della traccia, coerenza e correttezza dei risultati e degli elaborati tecnici prodotti.</td>
+            <td>completa, coerente e corretta</td>
+            <td>2,5</td>
+        </tr>
+        <tr>
+            <td>parzialmente coerenti e corrette</td>
+            <td>1,5</td>
+        </tr>
+        <tr>
+            <td>carenti</td>
+            <td>0,5</td>
+        </tr>
+        <tr>
+            <td rowspan=3>25%</td>
+            <td rowspan=3>Capacità di argomentare, collegare e sintetizzare le informazioni utilizzando in maniera corretta il linguaggio specifico</td>
+            <td>appropriata e corretta</td>
+            <td>2,5</td>
+        </tr>
+        <tr>
+            <td>con alcune imprecisioni </td>
+            <td>1,5</td>
+        </tr>
+        <tr>
+            <td>con molte imprecisioni</td>
+            <td>0,5</td>
+        </tr>                
+    </tbody>
+</table>
