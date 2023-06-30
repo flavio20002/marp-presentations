@@ -52,17 +52,16 @@ header: "</img>"
 
 ---
 
-# Classi e incarichi aggiuntivi
+# Classi ed incarichi
 
-- **1I**: 3 ore di cui 2 con ITP, 23 alunni
-- **1L**: 3 ore di cui 2 con ITP, 18 alunni
-- **1M**: 3 ore di cui 2 con ITP, 24 alunni
-- **3AET**: 4 ore di cui 2 con ITP, 21 alunni
-  - Tutor PCTO
-- **3CET**: 4 ore di cui 2 con ITP, 19 alunni
-- **4CET**: 5 ore di cui 3 con ITP, 17 alunni
-  - Segretario del consiglio di classe
-
+- **Tecnologie informatiche**
+    - **1I**
+    - **1L**
+    - **1M**
+- **Sistemi automatici**
+    - **3AET**: Tutor PCTO
+    - **3CET**
+    - **4CET**: Segretario del consiglio di classe
 ---
 
 <!-- _class: sectionpage -->
@@ -96,12 +95,40 @@ header: "</img>"
 
 # Patto per lo sviluppo professionale
 
-Di seguito sono riportati gli elementi del Patto per lo Sviluppo Professionale che sono stati più importanti per affrontare e superare i punti di debolezza identificati:
+Di seguito sono riportati gli elementi del Patto per lo Sviluppo Professionale:
 
 - Conoscere gli elementi epistemologici delle discipline e strutturare le conoscenze  intorno ai principi fondanti delle discipline
 - Essere capace di sviluppare collegamenti interdisciplinari
 - Stabilire una proficua relazione con i propri allievi favorendo un clima di classe positivo
 - Istituire rapporti efficaci e corretti con le famiglie
+
+---
+
+<!-- _class: sectionpage -->
+
+# Formazione docenti neoassunti
+
+---
+
+# Attività di formazione
+
+- Incontri propedeutici e di restituzione finale
+- Laboratori formativi
+- Peer to peer e osservazione in classe
+- Formazione on-line
+
+---
+
+# Laboratori formativi
+
+- **Durata totale**: 12 ore
+- **Modalità**: online
+- **Argomenti:**
+    - Valutazione didattica degli apprendimenti
+    - Valutazione di sistema (autovalutazione e miglioramento)
+    - Innovazione della didattica delle discipline e motivazione all’apprendimento
+    - Bisogni Educativi Speciali
+
 
 ---
 
@@ -283,6 +310,36 @@ Al fine di condividere le mie conoscenze relative ai dispositivi Beckhoff acquis
 - **Uso di strumenti e tecnologie digitali**: Ho approfondito le mie conoscenze e abilità nell'utilizzo di strumenti digitali per migliorare l'insegnamento e l'apprendimento. 
 - **Metodologie didattiche innovative**: Ho cercato di acquisire una maggiore padronanza di metodi didattici innovativi, come il cooperative learning, la flipped classroom e la gamification. 
 - **Competenze comunicative e relazionali**: Ho lavorato per migliorare le mie capacità di comunicazione e le relazioni con gli studenti, i genitori e i colleghi. 
+
+---
+
+# Sviluppi futuri
+
+- Approfondimento sull'utilizzo delle metodologie didattiche innovative
+- Tecnologie della didattica digitale e loro integrazione nel curricolo
+- Contrasto alla dispersione scolastica
+- Educazione alla sostenibilità
+
+---
+
+
+# Sviluppi futuri
+
+<div class="columns">
+
+<div>
+
+![h:800](images/anno-prova/bes-a-scuola.jpg#auto)
+
+
+</div>
+
+<div>
+
+![h:800](images/anno-prova/strategie-didattiche.jpg#auto)
+
+
+</div>
 
 ---
 
