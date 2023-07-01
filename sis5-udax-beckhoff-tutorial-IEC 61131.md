@@ -222,22 +222,55 @@ END_VAR
 
 ---
 
-# Linguaggio ST: IF ELSE
+# Linguaggio ST: IF
 
-```iecst
-PROGRAM MAIN
-VAR
-  Condition   : BOOL;
-  Message     : STRING  := '';
-END_VAR
-```
-<div class="line" style="width:100%"></div>
+<div class="columns" style="align-items: start">
+  <div>
 
-```iecst
-IF condition THEN
-  Message := 'The condition is true';
-END_IF
-```
+  **IF Statement**
+
+  ```iecst
+  PROGRAM MAIN
+  VAR
+    Condition   : BOOL;
+    Message     : STRING  := '';
+  END_VAR
+  ```
+  <div class="line" style="width:100%"></div>
+
+  ```iecst
+  IF condition THEN
+    Message := 'The condition is true';
+  END_IF
+  ```
+
+  </div>
+  <div>
+
+  **IF ELSE Statement**
+
+  ```iecst
+  PROGRAM MAIN
+  VAR
+    Condition   : BOOL;
+    Message     : STRING  := '';
+  END_VAR
+  ```
+  <div class="line" style="width:100%"></div>
+
+  ```iecst
+  IF condition THEN
+    Message := 'The condition is true';
+  ELSE
+    Message := 'The condition is false';
+  END_IF
+  ```
+
+  </div>
+</div>
+
+
+
 
 ---
 
