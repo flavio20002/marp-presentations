@@ -30,7 +30,8 @@ header: "</img>"
 
 - [Didattica](#didattica)
 - [Bilancio iniziale delle competenze](#bilancio-iniziale-delle-competenze)
-- [Attività didattica](#attivit%C3%A0-didattica-automazione-industriale-basata-su-pc-beckhoff)
+- [Formazione docenti neoassunti](#formazione-docenti-neoassunti)
+- [Progettazione attività didattica Beckhoff](#attivit%C3%A0-didattica-automazione-industriale-basata-su-pc-beckhoff)
 - [Bilancio finale](#bilancio-finale)
 
 ---
@@ -144,7 +145,9 @@ Di seguito sono riportati gli elementi del Patto per lo Sviluppo Professionale:
 - Disciplina **Sistemi Automatici** 
 - L’attività didattica è collocata all’interno di una Unità di Apprendimento chiamata *Applicazioni dei PLC*
 
-  ![](images/beckhoff/programmazione-didattica.svg#auto)
+<div class="gap"></div>
+
+![](images/beckhoff/programmazione-didattica.svg#auto)
 
 ---
 

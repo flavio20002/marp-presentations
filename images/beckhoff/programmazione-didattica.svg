@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="375mm"
-   height="60.528816mm"
-   viewBox="0 0 375 60.528818"
+   width="1640"
+   height="250"
+   viewBox="0 0 433.91666 66.145835"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
@@ -27,9 +27,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="773.57482"
-     inkscape:cy="42.426407"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="412.95036"
+     inkscape:cy="-19.79899"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -39,11 +39,11 @@
     <inkscape:grid
        type="xygrid"
        id="grid15412"
-       units="mm"
-       spacingx="1"
-       spacingy="1"
-       originx="39.999996"
-       originy="-29.823731" />
+       units="px"
+       spacingx="1.3229167"
+       spacingy="1.3229167"
+       originx="0"
+       originy="0" />
   </sodipodi:namedview>
   <defs
      id="defs2">
@@ -89,15 +89,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(39.999998,-29.823725)">
-    <rect
-       style="fill:#e0e4e9;fill-opacity:1;stroke:#434340;stroke-width:0.264583;stroke-opacity:1"
-       id="rect111"
-       width="84.867706"
-       height="60.087959"
-       x="-39.867706"
-       y="30.132292"
-       ry="4"
-       rx="4" />
     <text
        xml:space="preserve"
        transform="scale(0.26458333)"
@@ -129,22 +120,34 @@
        transform="scale(0.26458333)"
        id="text11678"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:Arial;white-space:pre;shape-inside:url(#rect11680);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Lato;-inkscape-font-specification:Lato;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
-       x="2.5599468"
-       y="56.517906"
-       id="text14676"><tspan
-         sodipodi:role="line"
-         id="tspan14674"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="2.5599451"
-         y="56.517906">Lo standard</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="2.5599461"
-         y="72.764328"
-         id="tspan14678">IEC 61131</tspan></text>
+    <g
+       id="g3190">
+      <rect
+         style="fill:#e0e4e9;fill-opacity:1;stroke:#434340;stroke-width:0.264583;stroke-opacity:1"
+         id="rect111"
+         width="85.857292"
+         height="65.528702"
+         x="-39.999996"
+         y="30.440861"
+         ry="4"
+         rx="4" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Lato;-inkscape-font-specification:Lato;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="2.9224498"
+         y="59.546844"
+         id="text14676"><tspan
+           sodipodi:role="line"
+           id="tspan14674"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="2.9224482"
+           y="59.546844">Lo standard</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="2.9224491"
+           y="75.793266"
+           id="tspan14678">IEC 61131</tspan></text>
+    </g>
     <text
        xml:space="preserve"
        transform="scale(0.26458333)"
@@ -152,71 +155,74 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect14682);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1" />
     <path
        style="fill:#e0e4e9;fill-opacity:1;stroke:#434340;stroke-width:0.264582;stroke-opacity:1"
-       d="m 55.133791,55.135309 h 23.919726 v -4.93234 L 95,60.067653 79.053517,69.932339 V 64.999997 H 55.133791 v -9.864688"
+       d="m 69.950803,57.964296 h 23.919726 v -4.93234 L 109.81701,62.89664 93.870529,72.761326 V 67.828984 H 69.950803 v -9.864688"
        id="path15610" />
-    <rect
-       style="fill:#e0e4e9;fill-opacity:1;stroke:#434340;stroke-width:0.264583;stroke-opacity:1"
-       id="rect111-0"
-       width="84.867706"
-       height="60.087959"
-       x="105.13229"
-       y="29.956017"
-       ry="4"
-       rx="4" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Lato;-inkscape-font-specification:Lato;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
-       x="147.53204"
-       y="48.221523"
-       id="text14676-0"><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="147.53204"
-         y="48.221523"
-         id="tspan21554">L'ambiente di</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="147.53204"
-         y="64.467941"
-         id="tspan21558">sviluppo </tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="147.53204"
-         y="80.714363"
-         id="tspan21560">TwinCAT</tspan></text>
+    <g
+       id="g3178"
+       transform="translate(21.761969)">
+      <rect
+         style="fill:#e0e4e9;fill-opacity:1;stroke:#434340;stroke-width:0.264583;stroke-opacity:1"
+         id="rect111-0"
+         width="85.857292"
+         height="65.881248"
+         x="112.26772"
+         y="29.956017"
+         ry="3.9999998"
+         rx="4" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Lato;-inkscape-font-specification:Lato;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="155.16226"
+         y="51.118168"
+         id="text14676-0"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="155.16226"
+           y="51.118168"
+           id="tspan21554">L'ambiente di</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="155.16226"
+           y="67.364586"
+           id="tspan21558">sviluppo </tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="155.16226"
+           y="83.611008"
+           id="tspan21560">TwinCAT</tspan></text>
+    </g>
     <path
        style="fill:#e0e4e9;fill-opacity:1;stroke:#434340;stroke-width:0.264582;stroke-opacity:1"
-       d="m 200,55.067652 h 23.91973 v -4.93234 l 15.94648,9.86468 -15.94648,9.86469 v -4.93234 H 200 v -9.86469"
+       d="m 243.98049,57.898151 h 23.91973 v -4.93234 l 15.94648,9.86468 -15.94648,9.86469 v -4.93234 h -23.91973 v -9.86469"
        id="path15610-3" />
-    <rect
-       style="fill:#e0e4e9;fill-opacity:1;stroke:#434340;stroke-width:0.264583;stroke-opacity:1"
-       id="rect111-0-0"
-       width="84.867706"
-       height="60.087959"
-       x="250"
-       y="29.956017"
-       ry="4"
-       rx="4" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Lato;-inkscape-font-specification:Lato;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
-       x="292.68811"
-       y="48.299038"
-       id="text14676-0-9"><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="292.68811"
-         y="48.299038"
-         id="tspan21560-3">Sviluppo </tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="292.68811"
-         y="64.545456"
-         id="tspan21648">moduli </tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="292.68811"
-         y="80.791878"
-         id="tspan21650">C++ e HMI</tspan></text>
+    <g
+       id="g3184"
+       transform="translate(10.583336,0.13229499)">
+      <rect
+         style="fill:#e0e4e9;fill-opacity:1;stroke:#434340;stroke-width:0.264583;stroke-opacity:1"
+         id="rect111-0-0"
+         width="85.857292"
+         height="66.013542"
+         x="297.47604"
+         y="29.823725"
+         ry="4"
+         rx="4" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Lato;-inkscape-font-specification:Lato;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="340.65894"
+         y="59.255848"
+         id="text14676-0-9"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="340.65894"
+           y="59.255848"
+           id="tspan1707">OOP </tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="340.65894"
+           y="75.502266"
+           id="tspan1705">C++ e HMI</tspan></text>
+    </g>
   </g>
 </svg>

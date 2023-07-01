@@ -22,8 +22,8 @@ section {
   --red-color: #E30512;
   padding-top: 10%;
   padding-bottom: 4%;
-  padding-left: 9%;
-  padding-right: 5%;
+  padding-left: 200px;
+  padding-right: 80px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -63,10 +63,10 @@ section:before {
   background-color: var(--red-color);
   width: 100%;
   height: 100%;
-  clip-path: polygon(4% 0%, 4% 100%, 6% 100%, 6% 0%);
+  clip-path: polygon(80px 0%, 80px 100%, 120px 100%, 120px 0%);
   position: absolute;
   z-index: 0;
-  margin-left: -9%;
+  margin-left: -200px;
   margin-top: -10% !important;
   margin-bottom: -4%;
 }
@@ -150,14 +150,10 @@ ol>p {
   margin: 0.6em 0 0;
 }
 
-ul {
-  padding-inline-start: 3.5%;
-}
-
 section:not(.titlepage):not(.sectionpage)>h1:first-of-type {
   position: absolute;
   top: 0px;
-  left: 9%;
+  left: 200px;
   z-index: 2;
   max-width: 80%;
   height: 20%;
@@ -180,7 +176,7 @@ section>ul>li>p>img {
   margin: auto;
   padding-top: 2%;
   padding-bottom: 2%;
-  padding-right: 3.5%;
+  padding-right: 0;
 }
 
 section>p>img,
@@ -331,7 +327,7 @@ section.titlepage .shape {
   position: absolute;
   z-index: 0;
   margin-top: -4% !important;
-  margin-left: -9%;
+  margin-left: -200px;
   margin-bottom: -4%;
 }
 
@@ -388,7 +384,7 @@ section.sectionpage:before {
   position: absolute;
   z-index: 0;
   margin-top: 0% !important;
-  margin-left: -9%;
+  margin-left: -200px;
   margin-bottom: -4%;
 }
 
