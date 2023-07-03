@@ -61,6 +61,15 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 5. **Sequential Function Chart (SFC)** Linguaggio basato su grafici di stato e diagrammi di flusso. Utilizzato per il controllo di macchine e processi complessi.
 ---
 
+
+# Struttura a due sezioni dell'editor
+
+- L'interfaccia di editing del codice in un ambiente di sviluppo per sistemi di automazione industriale è generalmente divisa in due sezioni. La sezione di **dichiarazione** e quella di **implementazione**.
+- Questa divisione in due sezioni separate offre una chiara distinzione tra la gestione delle variabili e la scrittura del codice, migliorando l'organizzazione e la comprensione del progetto.
+- Nell'atto di creazione di una **POU**, l'utente può scegliere il linguaggio di implementazione tra uno dei 5 linguaggi definiti dallo standard IEC 61131. La sezione di dichiarazione è **sempre** in linguaggio ST.
+
+---
+
 # Variabili
 
 - Le variabili sono elementi fondamentali nella programmazione PLC. Sono dei contenitori dove i dati vengono memorizzati e manipolati all'interno di un programma.
@@ -110,14 +119,17 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 
 ---
 
+<!-- _class: small -->
+
 # Etichette
 
-- Nella programmazione PLC, le **label** o etichette sono nomi simbolici associati alle variabili. Servono a identificare in modo univoco le variabili all'interno del programma.
-- Le label migliorano la leggibilità e la comprensibilità del codice, consentendo di assegnare nomi significativi alle variabili. Di seguito alcuni esempi:
+- Nella programmazione PLC, le **etichette** (in inglese *label*) sono nomi simbolici associati alle variabili. Servono a identificare in modo univoco le variabili all'interno del programma.
+- Le etichette migliorano la leggibilità e la comprensibilità del codice, consentendo di assegnare nomi significativi alle variabili. Di seguito alcuni esempi:
   - **Temperature**
   - **MotorSpeed**
   - **ValveStatus**
   - **PressureSetpoint**
+- A questo indirizzo sono riportate alcune regole utilizzabili per la nomenclatura delle variabili: https://alltwincat.com/2019/02/11/plc-naming-conventions/
 ---
 
 # Dichiarazione delle variabili
@@ -182,18 +194,25 @@ END_VAR
 
 ---
 
-# Struttura a due sezioni dell'editor
+# Gli array
 
-- L'interfaccia di editing del codice in un ambiente di sviluppo per sistemi di automazione industriale è generalmente divisa in due sezioni. La sezione di **dichiarazione** e quella di **implementazione**.
-- Questa divisione in due sezioni separate offre una chiara distinzione tra la gestione delle variabili e la scrittura del codice, migliorando l'organizzazione e la comprensione del progetto.
-- Nell'atto di creazione di una **POU**, l'utente può scegliere il linguaggio di implementazione tra uno dei 5 linguaggi definiti dallo standard IEC 61131
+- Un array è una raccolta di elementi dello stesso tipo. TwinCAT supporta array ad una dimensione (liste) ed array multidimensionali (matrici) di lunghezza fissa e variabile.
+- Di seguito vengono riportati alcuni esempi di dichiarazione
+
+  ```iecst
+  VAR
+    Counter : ARRAY[0..9] OF INT; //array ad una dimensione
+    CardGame : ARRAY[1..2, 3..4] OF INT; //array a due dimensioni
+    aData : ARRAY [*] OF INT; //array di lunghezza variabile
+  END_VAR
+  ```
 
 ---
 
 
 # Linguaggio Ladder
 
-- Il linguaggio Ladder è stato il primo linguaggio disponibile per programma i PLC. Si basa su simboli di provenienza "elettrica": binari di potenza (power rail), contatti elettrici (contact) e avvolgimenti magnetici (coil)
+- Il linguaggio Ladder è il primo linguaggio ideato per programmare i PLC. Si basa su simboli di provenienza "elettrica": binari di potenza (power rail), contatti elettrici (contact) e avvolgimenti magnetici (coil)
 - È costituito in linee verticali dette **rung**. Ciascun rung può contenere **contatti**, **coil**, **Function Block** e **Funzioni**
 - Ciascun **rung** deve essere connesso necessariamente al binario di potenza sinistro (left power rail), mentre il collegamento con quello destro è opzionale
 
@@ -202,9 +221,27 @@ END_VAR
 # Linguaggio ST
 
 
+---
 
+<!-- _class: small -->
+
+
+# Linguaggio ST: Espressioni logiche
+
+| Simbolo | Operazione|
+|:---------------:|:--------------------------------------:|
+| **=**           | Uguale a |
+| **<>**           | Diverso da |
+| **<**            | Minore |
+| **<=**            | Minore o uguale |
+| **>**            | Maggiore |
+| **>=**            | Maggiore o uguale |
+| **NOT**            | Not logico |
+| **AND**            | And logico |
+| **OR**            | Or logico |
 
 ---
+
 
 # Linguaggio ST: IF ELSE
 
@@ -241,7 +278,7 @@ END_VAR
   ```iecst
   IF condition THEN
     Message := 'The condition is true';
-  END_IF
+  END_IF;
   ```
 
   </div>
@@ -263,14 +300,161 @@ END_VAR
     Message := 'The condition is true';
   ELSE
     Message := 'The condition is false';
-  END_IF
+  END_IF;
   ```
 
   </div>
 </div>
 
+---
+
+# Linguaggio ST: ELSIF
+
+  ```iecst
+  PROGRAM MAIN
+  VAR
+    IntVar      : INT;
+    Message     : STRING  := '';
+  END_VAR
+  ```
+  <div class="line" style="width:100%"></div>
+
+  ```iecst
+  IF IntVar = 10 THEN
+    Message := 'The value is 10';
+  ELSIF IntVar = 20 THEN
+    Message := 'The value is 20';
+  ELSE THEN
+    Message := 'The value is another';
+  END_IF;
+  ```
+
+---
+
+# Linguaggio ST: CASE
+
+  ```iecst
+  PROGRAM MAIN
+  VAR
+    IntVar      : INT;
+    Message     : STRING  := '';
+  END_VAR
+  ```
+  <div class="line" style="width:100%"></div>
+
+  ```iecst
+  CASE IntVar OF
+    10: 
+      Message:= 'The value is 10';
+    20,30: 
+      Message:= 'The value is 20 or 30';
+    40..60:
+      Message:= 'The value is in the range 40 to 60';
+    ELSE
+      Message: 'The value is not listed';
+  END_CASE;
+  ```
+
+---
+
+# Linguaggio ST: Array
+
+<!-- _class: small -->
+
+- Per leggere o scrivere un Array nel linguaggio ST è possibile usare la seguente sintassi:
 
 
+  ```iecst
+  PROGRAM MAIN
+  VAR
+    Counter : ARRAY[0..9] OF INT;
+    AVariable : INT;
+  END_VAR
+  ```
+  <div class="line" style="width:100%"></div>
+
+  ```iecst
+  Counter[3] := 10;
+  AVariable := Counter[2];
+  ```
+- Per conoscere la dimensione di un Array a lunghezza variabile, si possono usare le funzioni **LOWER_BOUND** e **UPPER_BOUND**
+
+
+---
+
+# Linguaggio ST: ciclo FOR
+
+
+- Con l'istruzione FOR è possibile ripetere un blocco di istruzioni un numero definito di volte.
+
+  ```iecst
+  PROGRAM MAIN
+  VAR
+    Counter : INT;
+    Sum : INT := 0;
+  END_VAR
+  ```
+  <div class="line" style="width:100%"></div>
+
+  ```iecst
+  FOR Counter := 1 TO 5 BY 1 DO
+    Sum := Sum + Counter;
+  END_FOR;
+  ```
+
+---
+
+# Linguaggio ST: ciclo WHILE
+
+
+- Con l'istruzione WHILE è possibile ripetere un blocco di istruzioni un numero indefinito di volte finché si verifica una condizione. La condizione viene verificata all'inizio del ciclo.
+
+  ```iecst
+  PROGRAM MAIN
+  VAR
+    Counter : INT := 1;
+    Sum : INT := 0;
+  END_VAR
+  ```
+  <div class="line" style="width:100%"></div>
+
+  ```iecst
+  WHILE Counter <=10 DO
+    Sum := Sum + Counter;
+    Counter := Counter +1:
+  END_FOR;
+  ```
+
+---
+
+# Linguaggio ST: ciclo REPEAT
+
+
+- L'istruzione REPEAT è molto simile al WHILE, ma  la condizione viene verificata alla fine del ciclo.
+
+  ```iecst
+  PROGRAM MAIN
+  VAR
+    Counter : INT := 1;
+    Sum : INT := 0;
+  END_VAR
+  ```
+  <div class="line" style="width:100%"></div>
+
+  ```iecst
+  REPEAT
+    Sum := Sum + Counter;
+    Counter := Counter +1:
+  UNTIL
+    Counter > 10
+  END_REPEAT;
+  ```
+
+---
+
+# Linuaggio ST: nota sui cicli
+
+- È importante che il tempo di esecuzione totale del codice non superi un cycle time e dunque vanno evitati i loop infiniti di lunghezza non nota
 
 ---
 
