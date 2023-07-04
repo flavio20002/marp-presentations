@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: kennedy
+theme: kennedy-hd
 math: mathjax
 paginate: true
 transition: fade
@@ -9,7 +9,7 @@ header: "</img>"
 
 <!-- _class: titlepage -->
 
-![bg](images/beckhoff/beckhoff_sfondo.jpg)
+![bg](images/beckhoff/beckhoff_sfondo_hd.jpg)
 
 <div class="shape"></div>
 <div class="spacer"></div>

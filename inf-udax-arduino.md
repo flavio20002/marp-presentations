@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: kennedy
+theme: kennedy-hd
 math: mathjax
 paginate: true
 header: "</img>"
@@ -8,7 +8,7 @@ header: "</img>"
 
 <!-- _class: titlepage -->
 
-![bg](images/udax-arduino/arduino_sfondo.jpg)
+![bg](images/arduino/arduino_sfondo.jpg)
 
 <div class="shape"></div>
 <div class="spacer"></div>
@@ -58,7 +58,7 @@ simulazione di circuiti elettronici creato da Autodesk. Per accedere:
 
 # Panoramica
 
-![](images/udax-arduino/tinkercad.png)
+![](images/arduino/tinkercad.png)
 
 --- 
 
@@ -74,7 +74,7 @@ simulazione di circuiti elettronici creato da Autodesk. Per accedere:
   </div>
   <div>
 
-  ![](images/udax-arduino/progetto.png)
+  ![](images/arduino/progetto.png)
   </div>
 </div>
 
@@ -100,7 +100,7 @@ simulazione di circuiti elettronici creato da Autodesk. Per accedere:
 
 # Schema Elettrico
 
-![](images/udax-arduino/led_integrato_schema.png)
+![](images/arduino/led_integrato_schema.png)
 
 ---
 
@@ -159,7 +159,7 @@ l'orientamento del LED.
 
 # Schema Elettrico
 
-![](images/udax-arduino/led_esterno_schema.png)
+![](images/arduino/led_esterno_schema.png)
 
 ---
 
@@ -241,11 +241,12 @@ potenziometro
 
 # Schema Elettrico
 
-![](images/udax-arduino/led_potenziometro_schema.png)
+![](images/arduino/led_potenziometro_schema.png)
 
 ---
 
 # Codice
+
 
 ```cpp
 #define pinLed 3
@@ -259,13 +260,13 @@ void setup()
 
 void loop()
 {
-  // analogRead value is between 0-1023
-  byte value = analogRead(pinPot)/4;
-  // analogWrite value is between 0-255
-  analogWrite(pinLed, value);
-  delay(10);
+  byte value = analogRead(pinPot); // between 0-1023
+  value = value / 4;
+  analogWrite(pinLed, value); // between 0-255
+  delay(50); // A little delay to not read too often
 }
 ```
+
 ---
 
 <!-- _class: sectionpage -->
@@ -291,12 +292,13 @@ void loop()
 
 # Schema Elettrico
 
-![](images/udax-arduino/led_pulsante_schema.png)
+![](images/arduino/led_pulsante_schema.png)
 
 ---
 
-# Codice
+<!-- _class: small -->
 
+# Codice
 
 ```cpp
 #define pinLed 3
@@ -306,6 +308,7 @@ void setup() {
   pinMode(pinLed, OUTPUT);
   pinMode(pinButt, INPUT);
 }
+
 void loop() {
   bool buttonValue = digitalRead(pinButt);
   if (buttonValue) {
@@ -320,6 +323,8 @@ void loop() {
 ---
 
 # Variazioni
+
+<!-- _class: small -->
 
 <div class="columns">
 <div>
@@ -342,7 +347,7 @@ void setup() {
 
 void loop() {
   digitalWrite(pinLed, digitalRead(pinButt));
-  delay(100); // Wait for 100 millisecond(s)
+  delay(100);
 }
 ```
 
@@ -373,7 +378,7 @@ void loop() {
 
 # Schema Elettrico
 
-![](images/udax-arduino/led_fotoresistore_schema.png)
+![](images/arduino/led_fotoresistore_schema.png)
 
 ---
 
@@ -403,4 +408,4 @@ void loop() {
 
 # RGB LEDs
 
-[![w:700 RGB LEDs With Arduino in Tinkercad](images/udax-arduino/video.jpeg)](https://www.youtube.com/watch?v=YqHkULDmmGU "RGB LEDs With Arduino in Tinkercad")
+[![w:700 RGB LEDs With Arduino in Tinkercad](images/arduino/video.jpeg)](https://www.youtube.com/watch?v=YqHkULDmmGU "RGB LEDs With Arduino in Tinkercad")

@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: kennedy
+theme: kennedy-hd
 math: mathjax
 paginate: true
 transition: fade

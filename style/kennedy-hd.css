@@ -1,4 +1,7 @@
-/* @theme kennedy-hd */
+/**
+ * @theme kennedy-hd
+ * @auto-scaling false
+ */
 
 /*
   ============================================
@@ -235,7 +238,8 @@ thead th:empty {
 
 section.small li,
 section.small p,
-section.small table {
+section.small table,
+section.small pre {
   font-size: 0.8rem;
 }
 
@@ -273,7 +277,7 @@ section.verysmall table td {
 
 
 section.thankspage {
-  background-image: url("images/grazie-hd.jpg");
+  background-image: url("images/grazie.jpg");
 }
 
 section.thankspage::after {
