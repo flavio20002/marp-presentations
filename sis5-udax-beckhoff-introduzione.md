@@ -519,20 +519,36 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
 
 ---
 
-# Modifica delle variabili e debug
-
-<!-- _class: small -->
+# Modifica delle variabili online
 
 - Una volta online ed avviato il programma, fare doppio click sulla POU RunGrindingWheel per vedere lo stato delle variabili e modificarle.
-- Possiamo simulare la pressione del pulsante di start facendo doppio click sul contatto corrispondente (il valore diventa TRUE) e facendo poi click su PLC -> Scrivi valori (anche accessibile dalla toolbar in alto). Vedremo la variabile GVL_Grinding.GrindingWheelMS colorarsi di blu (valore TRUE)
-- Simuliamo il rilascio del pulsante di start scrivendo un valore FALSE. Noteremo che la variabile di uscita rimane colorata di blu (valore TRUE)
+- Possiamo simulare la pressione del pulsante di start facendo doppio click sul contatto corrispondente (il valore diventa TRUE) e facendo poi click su **PLC -> Scrivi valori** (anche accessibile dalla toolbar in alto). Vedremo la variabile GVL_Grinding.GrindingWheelMS colorarsi di blu (valore TRUE)
+- Simuliamo il rilascio del pulsante di start scrivendo un valore FALSE e facendo poi click su **PLC -> Scrivi valori**. Noteremo che la variabile di uscita rimane colorata di blu (valore TRUE).
+---
+
+# Modifica delle variabili online
+
+![](images/beckhoff/progetto_12.png)
+
+---
+
+
+# Modifica delle variabili online
+
 - Simuliamo la pressione del pulsante di stop ed il suo rilascio allo stesso modo. Noteremo che la variabile di uscita torna ad essere colorata di bianco (valore FALSE)
 
 ---
 
-# Modifica delle variabili e debug
+# Forzatura delle variabili online
 
-![](images/beckhoff/progetto_12.png)
+- Se proviamo a modificare il valore della variabile GrindingWheelMS, noteremo che il suo valore non cambia. Dopo un tempo di ciclo, questa viene infatti ri-settata al valore ottenuto dall'esecuzione della logica LD
+- Se vogliamo modificare il valore in maniera stabile, dobbiamo usare il pulsante **PLC -> Forza valori**
+- Le variabili forzate saranno indicate con una F in un quadratino rosso. Per eliminare la forzatura, va premuto il pulsante **PLC -> Elimina forzature**
+
+---
+
+# Effettuare modifiche online
+
 
 ---
 
@@ -609,4 +625,10 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
 
 <!-- _class: sectionpage -->
 
-# Collegamento ad un dispositivo remoto
+# Esecuzione su target remoto
+
+---
+
+# Mapping delle variabili
+
+- Per poter collegare i dispositivi dal campo (pulsanti e attuatore) è necessario modificare la configurazione delle variabili e, successivamente, associarle ai dispositivi di I/O Ethercat.
