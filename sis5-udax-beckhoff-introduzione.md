@@ -494,9 +494,18 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
 - Una volta compilato correttamente il programma, è necessario lanciare il comando TwinCAT -> Activate Configuration, che si occupa di:
   - Fermare il runtime di TwinCAT 3 runtime (tutti i programmi verranno arrestati ed i dispositivi di I/O spenti)
   - Applicare la configurazione realtime (numero di  core, task, etc.)
-  - Copiare il programma compilato sulla runtime
+  - Copiare il programma compilato sulla runtime (se selezionato Autoboot)
   - Applicare la configurazione di mapping 
   - Riavviare il runtime di TwinCAT  in run mode
+
+---
+
+# Autostart
+
+- Quando viene attivata la configurazione, è possibile selezionare l'opzione **Autostart PLC Boot Projects**. Questa opzione farà sì che il programma venga automaticamente caricato sul PLC in fase di Boot ed avviato.
+- Se non viene selezionata la voce, in fase di Login (operazione successiva) verrà chiesto il download del programma. Per mandare in esecuzione il programma sarà poi necessaria un'azione manuale.
+- Si consiglia di **non** selezionare l'opzione finché il programma non è pronto per essere utilizzato in un ambiente di Produzione.
+- Tale opzione è invece fondamentale in un ambiente di Produzione
 
 ---
 
@@ -514,7 +523,7 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
 # Esecuzione programma
 
 - Una volta generate le licenze ed attivata correttamente la configurazione, l'icone di TwinCAT nell'area di notifica sarà colorata di verde. 
-- Per poter eseguire l'applicazione ed effettuare il debug, bisogna andare Online. Fare click su PLC -> Login oppure facendo click sul simbolo verde con la porta e la freccia . - - Quando viene richiesto di caricare l'applicazione sul PLC, premere Sì
+- Per poter eseguire l'applicazione ed effettuare il debug, bisogna andare Online. Fare click su PLC -> Login oppure facendo click sul simbolo verde con la porta e la freccia . - - Quando viene richiesto di effettuare il download dell'applicazione sul PLC, premere Sì
 - Far partire l'applicazione facendo click su PLC -> Start nella barra dei menù oppure usando il tasto verde con il simbolo Play
 
 ---
@@ -542,93 +551,30 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
 # Forzatura delle variabili online
 
 - Se proviamo a modificare il valore della variabile GrindingWheelMS, noteremo che il suo valore non cambia. Dopo un tempo di ciclo, questa viene infatti ri-settata al valore ottenuto dall'esecuzione della logica LD
-- Se vogliamo modificare il valore in maniera stabile, dobbiamo usare il pulsante **PLC -> Forza valori**
-- Le variabili forzate saranno indicate con una F in un quadratino rosso. Per eliminare la forzatura, va premuto il pulsante **PLC -> Elimina forzature**
+- Se vogliamo modificare il valore in maniera stabile, dobbiamo usare il pulsante **PLC -> Forza i valori**
+- Le variabili forzate saranno indicate con una F in un quadratino rosso. Per eliminare la forzatura, va premuto il pulsante **PLC -> Annulla la forzatura per tutti i valori**
 
 ---
 
 # Effettuare modifiche online
 
+- TwinCAT supporta modifiche online alla logica dei programmi PLC e alle variabili. Grazie a tale funzionalità è possibile modificare la logica del PLC senza attivare una nuova configurazione quindi senza alcuna interruzione. La nuova logica verrà eseguita al primo ciclo PLC utile.
+- Non è possibile modifiche online all'associazione tra il programma PLC e l'I/O fisico. Per aggiungere o rimuovere I/O o modificare l'associazione tra I/O PLC e I/O fisico, utilizzare TwinCAT > Attiva configurazione dal menu principale e riavviare l'esecuzione, che comporterà il riavvio dei programmi PLC e causando un'interruzione del processo.
 
 ---
 
-<!-- _class: sectionpage -->
+# Effettuare modifiche online
 
-# Descrizione hardware
+Per apportare una modifica online a un programma PLC:
 
----
-
-# CX9020 | Basic CPU module
-
-![](images/beckhoff/cx9020.png)
-
----
-
-# CX9020 | Ethercat
-
-
-<div class="columns">
-  <div>
-
-  - Il PC industriale CX9020 permette la connessione di dispositivi Ethercat tramite i contatti striscianti presenti sul lato destro del dispositivo.
-  - Tali contatti permettono il trasferimento dei dati e dell'alimentazione ai moduli Ethercat aggiuntivi
-  </div>
-  <div>
-
-  ![w:600](images/beckhoff/cx9020_side.png)
-  </div>
-</div>
+- Assicurarsi di essere offline (effettuare il logout se si è online).
+- Modificare la logica del programma PLC e le variabili.
+- Effettuare il login e selezionare **Login con modifica online** quando richiesto.
+- Se è stata modificata una variabile (ad esempio, cambiato il tipo), verrà avvertito che la variabile verrà spostata in una nuova posizione di memoria e verrà chiesto se si desidera continuare.
+- Mettendo il check su aggiornare il progetto di avvio" se si sceglie "No", le modifiche andranno perse in caso di riavvio dell'esecuzione o del computer
 
 ---
-
-<!-- _class: small -->
-
-# EL1008 | 8-channel digital input
-
-<div class="columns">
-  <div>
-
-  - EL1008 è un terminale EtherCAT a 8 canali che acquisisce segnali di controllo binario a 24 V dal campo.
-  - Caratteristiche elettriche:
-    - 24 V DC (-15 %/+20 %)
-    - "0" signal voltage	-3…+5 V
-    - "1" signal voltage	11…30 V
-    - Corrente di input 3 mA
-  </div>
-  <div>
-
-  ![](images/beckhoff/el1008.png)
-  </div>
-</div>
-
----
-
-<!-- _class: small -->
-
-# EL2008 | 8-channel digital output
-
-<div class="columns">
-  <div>
-
-  - EL2008 è un terminale EtherCAT a 8 canali che permette di connettere comandare attuatori sul campo tramite segnali di controllo binari a 24 V DC.
-  - Caratteristiche elettriche:
-    - 24 V DC (-15 %/+20 %)
-    - Corrente massima di output 500 mA
-  </div>
-  <div>
-
-  ![](images/beckhoff/el2008.png)
-  </div>
-</div>
-
----
-
-<!-- _class: sectionpage -->
 
 # Esecuzione su target remoto
 
----
 
-# Mapping delle variabili
-
-- Per poter collegare i dispositivi dal campo (pulsanti e attuatore) è necessario modificare la configurazione delle variabili e, successivamente, associarle ai dispositivi di I/O Ethercat.

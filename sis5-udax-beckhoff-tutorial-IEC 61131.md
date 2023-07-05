@@ -85,7 +85,7 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 
 | | |
 | --------------- | -------------------------------------- |
-| **BOOL**            | Tipo booleano (1 bit, vero o falso)           |
+| **BOOL**            | Tipo booleano (1 byte, vero o falso)           |
 | **BYTE**            | Tipo di dato intero a 8 bit [0..255]    |
 | **WORD**            | Tipo di dato intero a 16 bit [0..65535]          |
 | **DWORD**           | Tipo di dato intero a 32 bit [0..4294967295]          |
@@ -119,42 +119,7 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 
 ---
 
-<!-- _class: small -->
 
-# Etichette
-
-- Nella programmazione PLC, le **etichette** (in inglese *label*) sono nomi simbolici associati alle variabili. Servono a identificare in modo univoco le variabili all'interno del programma.
-- Le etichette migliorano la leggibilità e la comprensibilità del codice, consentendo di assegnare nomi significativi alle variabili. Di seguito alcuni esempi:
-  - **Temperature**
-  - **MotorSpeed**
-  - **ValveStatus**
-  - **PressureSetpoint**
-- A questo indirizzo sono riportate alcune regole utilizzabili per la nomenclatura delle variabili: https://alltwincat.com/2019/02/11/plc-naming-conventions/
----
-
-# Dichiarazione delle variabili
-
-- Nello standard IEC 61131, le variabili vanno dichiarate prima di essere utilizzate nel programma PLC. La dichiarazione delle variabili include la specifica del nome, del tipo di dato, delle proprietà (se necessario) ed il valore iniziale se presente.
-- La sintassi generale per dichiarare una variabile è:
-
-  ```iecst
-  VAR
-      <nome>: <tipo di dato>;
-  END_VAR
-  ```
----
-
-# Esempio di dichiarazione
-
-```iecst
-VAR
-    Temperature: REAL; // Variabile per la temperatura
-    MotorSpeed: INT; // Variabile per la velocità del motore
-    ValveStatus: BOOL; // Variabile per lo stato della valvola
-    Counter: DINT := 0; // Variabile per un contatore inizializzata a 0
-    SensorData: ARRAY [0..9] OF WORD; // Variabile array per i dati del sensore
-END_VAR
-```
 ---
 
 <!-- _class: small -->
@@ -191,6 +156,48 @@ END_VAR
   - **TOD#00:00:00**
 - Variabile DATE_AND_TIME
   - **DT#1972-03-29-00:00:00**
+
+--- 
+<!-- _class: small -->
+
+# Etichette
+
+- Nella programmazione PLC, le **etichette** (in inglese *label*) sono nomi simbolici associati alle variabili. Servono a identificare in modo univoco le variabili all'interno del programma.
+- Le etichette migliorano la leggibilità e la comprensibilità del codice, consentendo di assegnare nomi significativi alle variabili. Di seguito alcuni esempi:
+  - **Temperature**
+  - **MotorSpeed**
+  - **ValveStatus**
+  - **PressureSetpoint**
+- A questo indirizzo sono riportate alcune regole utilizzabili per la nomenclatura delle variabili: https://alltwincat.com/2019/02/11/plc-naming-conventions/. In particolare, va evitata la notazione ungara https://en.wikipedia.org/wiki/Hungarian_notation
+---
+
+# Dichiarazione delle variabili
+
+- Nello standard IEC 61131, le variabili vanno dichiarate prima di essere utilizzate nel programma PLC. La dichiarazione delle variabili include la specifica del nome, del tipo di dato, delle proprietà (se necessario) ed il valore iniziale se presente.
+- La sintassi generale per dichiarare una variabile è:
+
+  ```iecst
+  VAR
+      <nome>: <tipo di dato>;
+  END_VAR
+  ```
+---
+
+# Esempio di dichiarazione
+
+```iecst
+VAR
+    Temperature: REAL; // Variabile per la temperatura
+    MotorSpeed: INT; // Variabile per la velocità del motore
+    ValveStatus: BOOL; // Variabile per lo stato della valvola
+    Counter: DINT := 0; // Variabile per un contatore inizializzata a 0
+    SensorData: ARRAY [0..9] OF WORD; // Variabile array per i dati del sensore
+END_VAR
+```
+---
+
+# Variabili locali e globabli
+
 
 ---
 
@@ -496,46 +503,3 @@ Multiline comment
   </div>
 </div>
 
----
-
-<!-- _class: sectionpage -->
-
-# Task PLC Multipli
-
----
-
-# Creare il progetto
-
-- Creare un nuovo progetto TwinCAT e creare un nuovo progetto PLC all'interno
-- Aprire il Program MAIN ed inserire all'interno il seguente codice:
-
-```iecst
-PROGRAM MAIN
-VAR
-  Test  :  DINT;
-END_VAR
-```
-<div class="line" style="width:100%"></div>
-
-```iecst
-Test:=Test+1;
-```
-
----
-
-# Creare un nuovo Task PLC
-
-- Per creare un nuovo task, fare click su System -> Tasks -> Add new item. Selezionare il tipo TwinCAT Task ed assegnare un nome al task (ad esempio PlcTask2). Modificare il Cycle Time in 5 ms
-- Creare un nuovo Program, facendo click su POUs -> Add POU. Selezionare il tipo Program ed assegnare il nome MAIN2
-- Per associare il Task ed il Program appena creato, fare click sul progetto PLC e poi su **Referenced Task**. Selezionare il Task creato in precedenza.
-- Fare click sul nuovo Task all'interno del progetto e selezionare **Add -> Existing item** e selezionare il Program creato in precedenza.
-
----
-
-# Esecuzione e Watch list
-
-- Copiare il codice dal Program MAIN a quello MAIN2, chiamando la variabile **test2**
-- Attivare la configurazione, eseguire il Login
-- Fare click con il tasto destro sulla variabile **test** e selezionare **Add Watch**. Ripetere l'operazione per il programma MAIN2 per la variabile **test2**
-- Aprire la Watch List facendo click su PLC -> Windows  -> Watch 1
-- Avviare l'applicazione e verificare che le variabili cambiano valore con velocità diversa
