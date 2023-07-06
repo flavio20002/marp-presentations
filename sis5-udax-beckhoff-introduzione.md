@@ -575,6 +575,119 @@ Per apportare una modifica online a un programma PLC:
 
 ---
 
+<!-- _class: sectionpage -->
+
 # Esecuzione su target remoto
 
+---
 
+# Modalità di connessione
+
+- Per potersi connettere al target remoto è necessario instaurare una connessione di rete tramite un cavo Ethernet.
+- Se il PC industriale è configurato per ottenere staticamente un indirizzo IP, è necessario semplicemente creare una rete nello stessa subnet mask e scegliere un indirizzo IP diverso.
+- È possibile utilizzare un cavo ethernet non intrecciato (comunemente usato per la connessione da un PC ad uno switch ethernet), dato che le schede di rete moderne implementano una funzione di Auto-MDI/MDIX
+
+---
+
+# Configurazione di rete
+
+<!-- _class: small -->
+
+<div class="columns">
+
+- Aprire il **Pannello di controllo** di Windows.
+- Selezionare **Rete e internet** e successivamente **Visualizza attività e stato della rete**
+- Fare click su **Modifica impostazioni scheda**
+- Individuare la scheda di rete con cui si vuole effettuare la connessione e fare click con il tasto destro del mouse. Selezionare **Proprietà**
+- Selezionare **Protocollo Internet versione 4** e premere su **Proprietà**
+
+![w:600](images/beckhoff/proprieta_scheda_rete.png)
+
+</div>
+
+---
+
+# Configurazione di rete
+
+<!-- _class: small -->
+
+<div class="columns">
+
+- L'indirizzo IP del PC industriale CX9020 è 192.0.0.253 con Subnet mask 255.255.0.0
+- Inserire dunque la stessa Subnet m ask ed un indirizzo IP compatibile. In pratica, è necessario soltanto che l'indirizzo IP inizi con 192.0. Ad esempio un indirizzo IP valido è 192.0.0.250
+- Verificare la connessione aprendo un prompt dei comandi (**cmd**) e usando il comando **ping 192.0.0.250**. Si dovrebbe ottenere il messaggio **Pacchetti: Trasmessi = 4, Ricevuti = 4**
+
+![w:600](images/beckhoff/proprieta_scheda_rete_2.png)
+
+</div>
+
+---
+
+# Connessione al PC industriale
+
+- È possibile connettersi al PC industriale per modificarne alcune impostazioni in due modi:
+  - tramite applicativo **CERHOST.exe** scaricabile all'indirizzo https://infosys.beckhoff.com/content/1033/cx51x0_hw/Resources/5047075211.zip
+  - tramite interfaccia web collegandosi al sito: https://192.0.0.253/config e inserendo il nome utente **Webguest** e password **1**
+
+---
+
+<!-- _class: small -->
+
+# Aggiungere un collegamento
+
+<div class="columns">
+
+  - Fare click con il tasto destro sull'icona di Twincat nell'area di notifica e selezionare **Router** e poi **Edit routes**
+  - Premere il pulsante **Add** ed inserire l'indirizzo IP 192.0.0.253 nel campo vicino al pulsante **Enter Host Name/IP** e premerlo
+  - Premere su **Advanced settings** e selezionare **IP address**
+  - Premere su **Add Route**. Non è necessario inserire la password. Una x comparirà vicino al campo **Connected**
+  - Premere il pulsante **Close** e verificare 
+
+  <div>
+
+  ![w:600](images/beckhoff/add_route_1.jpg)
+  ![w:600](images/beckhoff/add_route_2.jpg)
+  
+  </div>
+</div>
+
+---
+
+# Aggiungere un collegamento
+
+![w:1000](images/beckhoff/add_route_3.png)
+
+---
+
+# Aggiungere un collegamento
+
+![w:1400](images/beckhoff/add_route_4.png)
+
+---
+
+<!-- _class: small -->
+
+# Selezione del Target
+
+- Aprire un progetto TwinCAT. Nel menù a tendina del target sarà comparsa una nuova voce.
+
+![w:600](images/beckhoff/add_route_5.png)
+
+<div class="gap"></div>
+
+- Selezionare il target CX-47C6F4 e premere **Sì** alla richiesta di cambio piattaforma. Il PC CX9020 ha infatti un processore ARM, mentre i normali PC di uso comune hanno architettura X86.
+
+---
+
+# Configurazione Realtime
+
+- Per poter attivare la configurazione sul target remoto, è necessario riconfigurare le impostazioni Realtime per renderle compatibili con il target.
+- Effettuare un doppio click nella sezione SYSTEM -> Tasks del pannello Esplora soluzioni. 
+- Premere il pulsante **Read from Target** per leggere la configurazione dal Target corrente (in questo caso il PC industriale CX9020)
+- Selezionare l'unico core disponibile e lasciare le impostazioni di default
+
+---
+
+# Configurazione Realtime
+
+![w:1000](images/beckhoff/add_route_6.png)

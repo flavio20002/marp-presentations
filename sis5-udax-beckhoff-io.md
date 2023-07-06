@@ -106,6 +106,48 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 
 ---
 
+
+# EL3064
+
+
+---
+
+# EL4002
+
+
+---
+
+# EL7031
+
+
+---
+
+# EL3202
+
+
+---
+
+# EL4022
+
+
+---
+
+# ZK4000-6200-2010
+
+
+---
+
+# AS1010-0000
+
+
+---
+
+# EL9011
+
+
+---
+
+
 <!-- _class: small -->
 
 # Modifica delle variabili
