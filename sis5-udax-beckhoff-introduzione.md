@@ -30,8 +30,8 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 
 # Sommario
 
-- [Introduzione](#introduzione)
-- [Descrizione Hardware](#descrizione-hardware)
+- [I PLC](#i-plc)
+- [Beckhoff](#beckhoff)
 - [Installazione di TwinCAT](#installazione-di-twincat)
 - [Creazione di un progetto](#creazione-di-un-progetto)
 - [Collegamento ad un dispositivo remoto](#collegamento-ad-un-dispositivo-remoto)
@@ -40,15 +40,55 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 
 <!-- _class: sectionpage -->
 
-# Introduzione
+# I PLC
+
+---
+
+# Cos'è un PLC
+
+- Un PLC (Programmable Logic Controller) è in sistema elettronico a funzionamento digitale, destinato all’uso in ambito industriale, che utilizza una memoria programmabile per l’archiviazione interna di istruzioni orientate all’utilizzatore per l’implementazione di funzioni specifiche […] e per controllare, mediante ingressi e uscite sia digitali sia analogiche, vari tipi di macchine e processi (IEC 61131)
+
+- Il PLC presenta molti vantaggi rispetto alla logica cablata realizzata con componenti elettromeccanici e pneumatici:
+  - Possibilità di essere riprogrammati
+  - Modularità e facilità di espansione
+  - Assenza di parti meccaniche in movimento (relè) 
+
+---
+
+# Applicazioni
+
+Gli ambiti in cui i PLC trovano impiego sono molteplici e includono:
+
+- Controllo di macchine industriali e macchine utensili
+- Movimentazione di materiale nei cicli produttivi
+- Assemblaggio di componenti
+- Realizzazione e trattamento di materiali plastici
+- Controllo dei robot industriali
+
+---
+
+# Funzionamento dei PLC
+
+Il PLC funziona attraverso una scansione continua del programma costituita da tre passaggi:
+
+- Gli ingressi vengono acquisiti e copiati in una regione della RAM denominata **immagine di processo degli ingressi**
+- Il programma viene eseguito operando sulle variabili contenute nella RAM, ed in particolare leggendo l'**immagine di processo degli ingressi** e scrivendo l'**immagine di processo degli uscite**
+- Vengono scritti sulle uscite fisiche i valori contenuti all'interno dell'**immagine di processo degli uscite**
+
+
+
+---
+
+<!-- _class: sectionpage -->
+
+# Beckhoff
 
 ---
 
 # Beckhoff
 
-- La multinazionale Beckhoff realizza sistemi di automazione con tecnologia di controllo basata su PC. 
-- La gamma di prodotti copre i principali settori dell'industria come PC industriali, componenti per bus di campo e I/O, Motion Control e software di automazione.
-- Un elemento chiave della tecnologia di controllo PC-based di Beckhoff è il software di automazione TwinCAT (che sta per “The Windows Control and Automation Technology”), in grado di trasformare quasi qualsiasi sistema basato su PC in un sistema di controllo real-time, con un tempo di ciclo fino a 100 microsecondi. 
+- La multinazionale Beckhoff realizza sistemi di automazione basati su PC industriali. 
+- Un elemento chiave della tecnologia di controllo PC-based di Beckhoff è il software di automazione TwinCAT (che sta per “The Windows Control and Automation Technology”), in grado di trasformare quasi qualsiasi sistema basato su PC in un sistema di controllo real-time, con un tempo di ciclo fino a 100 microsecondi, ovvero quello che viene denominato SoftPLC. 
 
 ---
 
@@ -79,13 +119,11 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 
 ---
 
-<!-- _class: small -->
 
 # Struttura di TwinCAT
 
-TwinCAT è diviso in due moduli:
-- **Engineering**: TwinCAT XAE (eXtended Automation Engineering) è l'ambiente di sviluppo vero e proprio. Permette di sviluppare il software nei linguaggi di programmazione IEC 61131-3, in C/C++ e  MATLAB®/Simulink®. Il tool offre inoltre funzionalità di debug e diagnostica e può essere facilmente esteso per includere ulteriori moduli software, dato che si basa su Visual Studio di Microsoft.
-- **Runtime**: TwinCAT XAR (eXtended Automation Runtime) è un ambiente con capacità di calcolo in tempo reale in cui il programma può essere eseguito. La sua architettura modulare rende possibile installare e caricare estensioni su richiesta. Il Runtime viene eseguito di fianco al sistema operativo, dove ulteriori task possono essere eseguiti. 
+- **TwinCAT XAE** (eXtended Automation Engineering) è un ambiente di sviluppo basato su Microsoft Visual Studio. Permette di sviluppare il software nei linguaggi di programmazione IEC 61131-3, in C/C++ e  MATLAB®/Simulink®. Il tool offre inoltre funzionalità di debug e diagnostica e può essere facilmente esteso per includere ulteriori moduli software.
+- **TwinCAT XAR** (eXtended Automation Runtime) è un ambiente con capacità di calcolo in tempo reale in cui il programma può essere eseguito. La sua architettura modulare rende possibile installare e caricare estensioni su richiesta. Il Runtime viene eseguito a basso livello, insieme al Sistema Operativo.
 
 ---
 
@@ -95,12 +133,11 @@ TwinCAT è diviso in due moduli:
 
 ---
 
-<!-- _class: small -->
+
 
 # EtherCAT
 
-- EtherCAT (Ethernet for Control Automation Technology) è una tecnologia Ethernet industriale deterministica sviluppata originariamente da Beckhoff Automation. Il protocollo EtherCAT, pubblicato nello standard IEC61158, soddisfa requisiti real-time nell'automazione, in sistemi di test e di misura e in molte altre applicazioni.
-- I telegrammi EtherCAT hanno la stessa struttura di un telegramma Ethernet TCP/IP (46÷1500 byte).
+- EtherCAT (Ethernet for Control Automation Technology) è una tecnologia Ethernet industriale deterministica (real-time) sviluppata originariamente da Beckhoff Automation. Il protocollo EtherCA è stato pubblicato nello standard IEC 61158 (Reti di comunicazione industriale).
 - Il master EtherCAT invia un telegramma che attraversa tutti i nodi. Ogni slave EtherCAT legge i dati di uscita ad esso destinati e scrive quelli da esso prodotti nel frame “al volo”, mentre quest’ultimo si propaga verso i nodi successivi. Il ritardo subito dal frame è pari al solo tempo di attraversamento fisico dello slave. L’ultimo nodo in un segmento o linea di caduta rinvia il messaggio al master avvalendosi della comunicazione full-duplex di Ethernet.
 
 ---
@@ -148,7 +185,7 @@ TwinCAT è diviso in due moduli:
   - gestire il moduli di sicurezza, motion control, reti
   - utilizzare moduli esistenti esistenti C/C++ e Matlab Simulink 
 
-- **Installazione ingrata**: TwinCAT viene integrato all'interno di una installazione di Visual Studio preesistente. Permette di scrivere moduli in linguaggio C++, Matlab Simulink, e applicazioni non realtime in C#/.NET
+- **Installazione integrata**: TwinCAT viene integrato all'interno di una installazione di Visual Studio preesistente. Permette di scrivere moduli in linguaggio C++, Matlab Simulink, e applicazioni non realtime in C#/.NET
 
 ---
 

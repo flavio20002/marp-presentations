@@ -61,6 +61,20 @@ Prof. Flavio Barisi - Anno scolastico 2022/23
 5. **Sequential Function Chart (SFC)** Linguaggio basato su grafici di stato e diagrammi di flusso. Utilizzato per il controllo di macchine e processi complessi.
 ---
 
+# Program Organization Unit
+
+
+- Le POU (Programmation Organization Units) sono unità organizzative del codice che possono essere riutilizzate
+  - Funzioni
+  - Blocchi funzionali
+  - Programmi
+- Una POU è composta da
+  - Definizione del tipo di POU e del nome
+  - Dichiarazione di variabili
+  - Implementazione della POU
+
+---
+
 
 # Struttura a due sezioni dell'editor
 
