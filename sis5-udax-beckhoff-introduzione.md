@@ -474,7 +474,7 @@ In TwinCAT un PLC è in realtà un PLC virtuale. È possibile infatti eseguire p
 
 # Creare una POU in LD
 
-- Una POU (Program Organization Unit)  la logica del PLC .Possiamo notare che una POU chiamata MAIN è già stata creata in fase di creazione del progetto
+- Una POU (Program Organization Unit) contiene la logica del PLC .Possiamo notare che una POU chiamata MAIN è già stata creata in fase di creazione del progetto
 - Fare click con il tasto destro nella cartella POUs del progetto PLC nel pannello Esplora Soluzioni e selezionare Add -> POU
 - Inserire un nome per il programma RunGrindingWheel, selezionare il tipo Programma ed il linguaggio di programmazione Ladder Logic Diagram (LD) chiamato anche Linguaggio a contatti
 - Fare click sul tasto Apri. La nuova POU verrà creata e aperta per la modifica.
